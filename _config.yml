@@ -10,7 +10,7 @@ description: >
   Insert description here.
 url: http://barber.samesies.io
 twitter_username: ''
-default_img: /assets/images/seo.jpg
+default_img: /assets/images/pic06.jpg
 social:
   - name: linkedin
     url: https://www.linkedin.com/in/marijn-van-der-meer/
@@ -18,7 +18,7 @@ social:
     url: https://github.com/marvande
 
 # Contact settings
-contact_img: /assets/images/placeholder-28.jpg
+contact_img: /assets/images/pic06.jpg
 formcarry: https://formcarry.com/s/HkIo0nMb7
 
 # Disqus settings
@@ -30,9 +30,43 @@ mailchimp_input: b_66ddf555dab480e6a8606430b_89b3ee034f
 
 # Author settings
 author:
-  - name: Thomas Vaeth
-    bio: Thomas Vaeth was born in New York, raised in Pennsylvania, and transplanted in Washington. He was a Web Developer at Urban Influence, but now he's a Software Engineer at Getty Images.
-    url: http://thomasvaeth.com
+  - name: Group Ada Bubble 582
+    bio: Marijn van der Meer, Marco Pietro Abrate, Amandine Goffeney and Lou Locci from the EPFL. 
+    url: https://github.com/marvande/epfl-ada-2019-project-bubble582
+
+# Team names, titles and social links
+people:
+  - name: Lou Locci
+    pic: 2
+    social:
+      - title: github
+        url: https://github.com/Loulocci
+      - title: linkedin
+        url: https://www.linkedin.com/in/lou-locci-525350131/
+
+  - name: Amandine Goffeney
+    pic: 1
+    social:
+      - title: github
+        url: https://github.com/amandinegoffeney
+      - title: linkedin
+        url: https://www.linkedin.com/in/amandine-goffeney/
+
+  - name: Marijn van der Meer
+    pic: 3
+    social:
+      - title: github
+        url: https://github.com/marvande
+      - title: linkedin
+        url: https://www.linkedin.com/in/marijn-van-der-meer/
+
+  - name: Marco Pietro Abrate
+    pic: 4
+    social:
+      - title: github
+        url: https://github.com/marcoabrate
+      - title: linkedin
+        url: https://www.linkedin.com/in/marcoabrate/
 
 # Pagination settings
 pagination:
