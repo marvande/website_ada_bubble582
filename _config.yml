@@ -87,7 +87,7 @@ autopages:
   tags:
     layouts: 
       - 'tag.html'
-    title: 'The Barber Theme'
+    title: 'Data story Ada'
     permalink: '/tag/:tag'
     slugify:
       mode: raw
