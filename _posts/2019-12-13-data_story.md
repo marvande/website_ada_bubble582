@@ -144,12 +144,14 @@ After this investigation full of twists and turns, Duck's answer to the C.A.G is
 <p>
 <p><i>What Duck could have done better</i></p>
 <p>
-The data collection the detective has analyzed might be atypical. Since he did not have any information about the location of the shopping center, we cannot claim that it represents the average grocery store. 
-Moreover the number of households who gave their demographic features was limited. The accuracy of machine learning analysis often rely on the dataset size. We wonder if we were biased by a too small dataset. 
-We chose the product’s classification arbitrarily. The different labels were set depending on the common class of food we personally know. Using a machine learning classification could have created unexpected and relevant groups of products.
+The data collection the detective has analyzed might be atypical. Since he did not have any information about the location of the shopping center, he cannot claim that it represents the average grocery store. 
+Moreover the number of households who gave their demographic features was limited. The accuracy of machine learning analysis often rely on the dataset size. Duck wonders if his work was biased by a too small dataset. 
+He chose the product’s classification arbitrarily. The different labels were set depending on the common class of food he personally knew. Using a machine learning classification could have created unexpected and relevant groups of products.
 <p>
     
 <p><i>Project next steps</i></p>
 <p>
-As further work we advise to run a meta analysis among several shopping centers, in order to confirm or infirm our conclusions. The household set for each center should preferably be bigger and the products classification should be comparable in between the different grocery stores. 
+As further work Duck advises the C.A.G to run a meta analysis among several shopping centers, in order to confirm or infirm his conclusions. The household set for each center should preferably be bigger and the products classification should be comparable in between the different grocery stores. 
 <p>
+
+Good job detective Duck. The smart little guy is already gone for a new investigation.
