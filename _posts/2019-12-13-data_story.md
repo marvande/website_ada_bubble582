@@ -29,11 +29,11 @@ Living in a time and age where every piece of our data is stored and analysed, t
 
    The consumer advocacy group (also called G.A.C) provided the detective Duck  with a dataset owned by Dunhumby, an american data science company. This dataset includes the results of a two years long study, over 2500 voluntary households. Detective Duck knows that companies use harvested data to perform targeted marketing. Using his skills in data analysis, he plans to find out exactly what can be predicted out about the customer's personnal information. He expects to observe an relation in between the clients's consumption habits and their demographic characteristics. For example, he suspects that the income category will influence the amount and price range of groceries bought per week. 
 
-**Preprocessing.**   
+**Preprocessing.**      
 
    When facing a huge amount of data, detective Duck has learned to start by preprocessing and cleaning the available information. For this, he keeps only households which portrayed coherent and sufficient demographic data. In a second time he labels the products with precise categories refering to grocery shopping.
 
-*Demographics*    
+*Demographics*       
 
    Detective Duck had to face a main issue when preprocessing his demographic data. Indeed, over the 2500 households studied by Dunhumby, only 780 provided their demographic information. Among these 780 families, around 750 were selected after cleaning. At this moment, suspicions started to arise in detective Duck's mind. A too small amount of data might cause troubles. Nevertheless, after a long night of working and cursing, the data was finally usable and analysable.
  
@@ -52,7 +52,7 @@ Living in a time and age where every piece of our data is stored and analysed, t
 Now detective Duck is faced with the real challenge. He aims to try and extract the main consumption patterns of the clients and correlate them to their demographic features. For this, he developped several strategies as the investigation turned out to be harder than he tought when venturing into this case. Looking at the data, he quickly regretted ever leaving his cozy pond. 
 
 
-*Products*    
+*Products*       
 
    After families selection, the detective Duck still needs to look at what they buy. The 750 selected families had access to a total of 92353 different products in their shopping center. These products are defined by their department (the place at which we find them) and by two different and non standard descriptive words sequences (commodity and sub-commodity). To be able to classify them the detective creates a function comparing both the commodity and the sub-commodity to a list of expressions from the lexical field of the grocery. He associates each expression to a certain grocery category. Since the products' descriptions are atypical, he give them a "score of similarity" with the expressions in the list. The highest score, above a certain threshold determines the label of the product. He uses the Fuzzywuzzy library to calculate this score. Fuzzywuzzy is based on Levenshtein Distance to calculate the differences and similarities between string sequences. 
 
