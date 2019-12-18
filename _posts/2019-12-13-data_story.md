@@ -99,20 +99,57 @@ Duck is not the kind of people giving up when he gets weak correlations, he is a
 <p>
 Duck needs to change his plan of attack in this second prediction attempt. He decides to focus on the typical cart itself rather than and overall consumption of the household. To do so he sorts the products and select the ⅔ of the most bought ones.
 <p>
+<p><i>Being a strategic Duck</i></p>
 <p>
-Then he uses different strategies to cluster his data and select the most interesting one :
-<p>
-<p>
-<span>&#8226;</span> His first idea is to cluster households in function of the main products they buy. He identifies the best number of clusters, which is in between 5 and 9, with elbow. Then he applies K-mean to create 7 households clusters. He uses a threshold at ⅓  of the households. Thus, a product is characterizing a cluster if and only if, at least one third of the households has bought this product. Two of the final clusters contain only one family. Interestingly 4 different clusters are characterized by the dairy products, bananas they buy. Duck wonders if the type of milk can give a hint on who is buying it. The biggest cluster, 1065 familis, is made of households buying unknown products. For the detective, it means that these households are not characterized by any common product.
+At that time, he uses different strategies to cluster his data and select the most interesting one :
 <p>
 <p>
-<span>&#8226;</span> His second idea is reducing the dataset of <i>the average amount of products bought per label by the household</i> 's dimensions using SVD. After the reduction, two dimensions explain 58% of the variance. The detective then plots the data along these two dimensions to see if he can observe some clusters. However he can not see clear clusters that could predict a certain demographic. 
+<span>&#8226;</span> <em>I)</em>  His first idea is to cluster households in function of the main products they buy. He identifies the best number of clusters, which is in between 5 and 9, with elbow. Then he applies K-mean to create 7 households clusters. He uses a threshold at ⅓  of the households. Thus, a product is characterizing a cluster if and only if, at least one third of the households has bought this product. Two of the final clusters contain only one family. Interestingly 4 different clusters are characterized by the dairy products, bananas they buy. Duck wonders if the type of milk can give a hint on who is buying it. The biggest cluster, 1065 familis, is made of households buying unknown products. For the detective, it means that these households are not characterized by any common product.
 <p>
+<p>
+<span>&#8226;</span> <em>II)</em>  His second idea is reducing the dataset of <i>the average amount of products bought per label by the household</i> 's dimensions using SVD. After the reduction, two dimensions explain 58% of the variance. The detective then plots the data along these two dimensions to see if he can observe some clusters. However he can not see clear clusters that could predict a certain demographic. 
+
 
 <img class="center" src="{{ "/assets/images/BAD-corrplots.png" | absolute_url }}" alt="Markdown Monster icon" width = "800" height = "600" />
 
-<p>
+
 To make sure that this visualization does not hide any clusters, we use elbow to find a good cluster’s number. However no good clustering arise from this analysis.
 <p>
 
 <img class="center" src="{{ "/assets/images/BAD-elbow.png" | absolute_url }}" alt="Markdown Monster icon" width = "500" height = "300" />
+
+<p>
+<span>&#8226;</span> <em>III)</em>  In a third time, Duck reproduces the second strategy but taking a step back, and looking at the department instead of the labels. Elbow finds an ideal clustering for 4 clusters. Interestingly the K-mean clustering shows 4 groups mainly characterized by the quantities bought in the grocery department. 
+<p>
+<img class="center" src="{{ "/assets/images/BAD-clusters.png" | absolute_url }}" alt="Markdown Monster icon" width = "450" height = "225" />
+    
+
+<p><i>Best prediction further analysis</i></p>
+<p>
+Duck finally selects the third strategy, which gave the best results, and goes deeper into details. He looks at how precise it is possible to be when predicting demographics. He picks the biggest cluster and plots its correlation matrix in between the product quantities per label, the demographic features, the spendings and the participation rate. The correlations are now way stronger than within the overall households. The highest scores (around 0.8) are for the dairy products and the processed foods correlated to the households size or number of kids. Interestingly, it reminds the detective about his finding using the first strategy. Moreover, the other correlations are mainly strong but not really strong. This implies that the retailer would need to compare the households over an important number of features to acceptably predict their demographics.  
+The G.A.C might be interested.
+<p>
+
+<img class="center" src="{{ "/assets/images/BAD-correlation-matrix2.png" | absolute_url }}" alt="Markdown Monster icon" width = "600" height = "400" />
+
+<!--CHAPTER 3: -->
+<h4>Chaptre 3.  Time to report the results to the C.A.G.</h4>
+
+<p><em><strong>Discussion and conclusion with the C.A.G</strong></em></p>
+
+<p><i>What detective Duck learned from this investigation</i></p>
+<p>
+After this investigation full of twists and turns, Duck's answer to the C.A.G is the following: 
+“First of all you should not worry too much. It is not as easy to get anything interesting from people’s shopping habits, at least not at the scale of a single retailer. Retailers would need to build a clever data collection and to invest money in a data analysis professional. Indeed families are more similar than we expected, no matters in which social class they are. However, I was still able to predict some simple features, as for instance having kids or not.” 
+<p>
+<p><i>What Duck could have done better</i></p>
+<p>
+The data collection the detective has analyzed might be atypical. Since he did not have any information about the location of the shopping center, we cannot claim that it represents the average grocery store. 
+Moreover the number of households who gave their demographic features was limited. The accuracy of machine learning analysis often rely on the dataset size. We wonder if we were biased by a too small dataset. 
+We chose the product’s classification arbitrarily. The different labels were set depending on the common class of food we personally know. Using a machine learning classification could have created unexpected and relevant groups of products.
+<p>
+    
+<p><i>Project next steps</i></p>
+<p>
+As further work we advise to run a meta analysis among several shopping centers, in order to confirm or infirm our conclusions. The household set for each center should preferably be bigger and the products classification should be comparable in between the different grocery stores. 
+<p>
