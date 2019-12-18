@@ -6,95 +6,89 @@
 </description>
     <link>http://localhost:4000</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 18 Dec 2019 13:42:02 +0100</pubDate>
-    <lastBuildDate>Wed, 18 Dec 2019 13:42:02 +0100</lastBuildDate>
+    <pubDate>Wed, 18 Dec 2019 14:20:52 +0100</pubDate>
+    <lastBuildDate>Wed, 18 Dec 2019 14:20:52 +0100</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
         <title>Tell me what you buy, I will tell you who you are. A data story.</title>
-        <description>&lt;h2 id=&quot;preface&quot;&gt;Preface:&lt;/h2&gt;
-&lt;p&gt;Due to rumours about the troublesome ability of shopping centers to infer consumer information based on their shopping patterns, a private investigator, detective Duck, was hired by a consumer advocacy group to investigate the matter. Here are the details of his investigation.&lt;/p&gt;
-
+        <description>&lt;!--Style used in the document: --&gt;
 &lt;style&gt;
-    .img-container{
-        text-align: center;
-    }
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+p{
+    text-align: justify;
+}
 &lt;/style&gt;
 
-&lt;body&gt;
-&lt;div class=&quot;img-container&quot;&gt;
-&lt;img src=&quot;http://localhost:4000/assets/images/pic08.png&quot; alt=&quot;Markdown Monster icon&quot; width=&quot;200&quot; height=&quot;300&quot; /&gt;
-&lt;/div&gt;
-&lt;/body&gt;
+&lt;!--PREFACE: --&gt;
+&lt;h4&gt;Chapter 0. Preface.&lt;/h4&gt;
+&lt;p&gt;
+Due to rumours about the troublesome ability of shopping centers to infer consumer information based on their shopping patterns, a private investigator, detective Duck, was hired by a consumer advocacy group to investigate the matter. Here are the details of his investigation.
+&lt;/p&gt;
 
-&lt;p&gt;Living in a time and age where every piece of our data is stored and analysed, the consumer advocacy group wonders what information retailers can gather and infer about consumers. To answer their question, detective Duck only gets information about a two year shopping spree of a group of 2500 clients of an unknown shopping center in the US. Based on this data, he seeks to identify possible links, if they exist, between demographic information (e.g. marital status, income, number of children, etc) and  purchase patterns. In other words, he would like to see how “easy” and how precise it is for retailers to infer a specific customer profile based on what their shopping habits as this could lead to easy targeted marketing. Luckily, detective Duck has followed the autumn 2019 Applied Data Analysis at the EPFL and counts on applying his newly aquired knowledge to this case.&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;center&quot; src=&quot;http://localhost:4000/assets/images/pic08.png&quot; alt=&quot;Markdown Monster icon&quot; width=&quot;200&quot; height=&quot;150&quot; /&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;chapter-1-a-rocky-start-to-a-rocky-investigation&quot;&gt;Chapter 1. A rocky start to a rocky investigation.&lt;/h2&gt;
+&lt;p&gt;
+Living in a time and age where every piece of our data is stored and analysed, the consumer advocacy group wonders what information retailers can gather and infer about consumers. To answer their question, detective Duck only gets information about a two year shopping spree of a group of 2500 clients of an unknown shopping center in the US. Based on this data, he seeks to identify possible links, if they exist, between demographic information (e.g. marital status, income, number of children, etc) and  purchase patterns. In other words, he would like to see how &quot;easy&quot; and how precise it is for retailers to infer a specific customer profile based on what their shopping habits as this could lead to easy targeted marketing. Luckily, detective Duck has followed the autumn 2019 Applied Data Analysis at the EPFL and counts on applying his newly aquired knowledge to this case. 
+&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;A Dunnhumby dataset.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;hr /&gt;
 
-&lt;p&gt;The consumer advocacy group (also called G.A.C) provided the detective Duck  with a dataset owned by Dunhumby, an american data science company. This dataset includes the results of a two years long study, over 2500 voluntary households. Detective Duck knows that companies use harvested data to perform targeted marketing. Using his skills in data analysis, he plans to find out exactly what can be predicted out about the customer’s personnal information. He expects to observe an relation in between the clients’s consumption habits and their demographic characteristics. For example, he suspects that the income category will influence the amount and price range of groceries bought per week.&lt;/p&gt;
+&lt;!--CHAPTER 1: --&gt;
+&lt;h4&gt;Chapter 1. A rocky start to a rocky investigation.&lt;/h4&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;A Dunnhumby dataset.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Preprocessing.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;
+    The consumer advocacy group (also called G.A.C) provided the detective Duck  with a dataset owned by Dunhumby, an american data science company. This dataset includes the results of a two years long study, over 2500 voluntary households. Detective Duck knows that companies use harvested data to perform targeted marketing. Using his skills in data analysis, he plans to find out exactly what can be predicted out about the customer's personnal information. He expects to observe an relation in between the clients's consumption habits and their demographic characteristics. For example, he suspects that the income category will influence the amount and price range of groceries bought per week. 
+&lt;/p&gt;
 
-&lt;p&gt;When facing a huge amount of data, detective Duck has learned to start by preprocessing and cleaning the available information. For this, he keeps only households which portrayed coherent and sufficient demographic data. In a second time he labels the products with precise categories refering to grocery shopping.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Preprocessing.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Demographics&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;
+   When facing a huge amount of data, detective Duck has learned to start by preprocessing and cleaning the available information. For this, he keeps only households which portrayed coherent and sufficient demographic data. In a second time he labels the products with precise categories refering to grocery shopping.
+&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Demographics.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;Detective Duck had to face a main issue when preprocessing his demographic data. Indeed, over the 2500 households studied by Dunhumby, only 780 provided their demographic information. Among these 780 families, around 750 were selected after cleaning. At this moment, suspicions started to arise in detective Duck’s mind. A too small amount of data might cause troubles. Nevertheless, after a long night of working and cursing, the data was finally usable and analysable.&lt;/p&gt;
+&lt;p&gt;
+   Detective Duck had to face a main issue when preprocessing his demographic data. Indeed, over the 2500 households studied by Dunhumby, only 780 provided their demographic information. Among these 780 families, around 750 were selected after cleaning. At this moment, suspicions started to arise in detective Duck's mind. A too small amount of data might cause troubles. Nevertheless, after a long night of working and cursing, the data was finally usable and analysable.
+&lt;/p&gt;
 
-&lt;style&gt;
-    .img-container{
-        text-align: center;
-    }
-&lt;/style&gt;
+&lt;p&gt;&lt;img class=&quot;center&quot; src=&quot;http://localhost:4000/assets/images/pic09.png&quot; alt=&quot;Markdown Monster icon&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;
+Now detective Duck is faced with the real challenge. He aims to try and extract the main consumption patterns of the clients and correlate them to their demographic features. For this, he developped several strategies as the investigation turned out to be harder than he tought when venturing into this case. Looking at the data, he quickly regretted ever leaving his cozy pond. 
+&lt;/p&gt;
 
-&lt;body&gt;
-&lt;div class=&quot;img-container&quot;&gt;
-&lt;img src=&quot;http://localhost:4000/assets/images/pic09.png&quot; alt=&quot;Markdown Monster icon&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;
-&lt;/div&gt;
-&lt;/body&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Products.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;Now detective Duck is faced with the real challenge. He aims to try and extract the main consumption patterns of the clients and correlate them to their demographic features. For this, he developped several strategies as the investigation turned out to be harder than he tought when venturing into this case. Looking at the data, he quickly regretted ever leaving his cozy pond.&lt;/p&gt;
+&lt;p&gt;
+   After families selection, the detective Duck still needs to look at what they buy. The 750 selected families had access to a total of 92353 different products in their shopping center. These products are defined by their department (the place at which we find them) and by two different and non standard descriptive words sequences (commodity and sub-commodity). To be able to classify them the detective creates a function comparing both the commodity and the sub-commodity to a list of expressions from the lexical field of the grocery. He associates each expression to a certain grocery category. Since the products' descriptions are atypical, he give them a &quot;score of similarity&quot; with the expressions in the list. The highest score, above a certain threshold determines the label of the product. He uses the Fuzzywuzzy library to calculate this score. Fuzzywuzzy is based on Levenshtein Distance to calculate the differences and similarities between string sequences. 
+&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Products&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;center&quot; src=&quot;http://localhost:4000/assets/images/BAD-products_trans_label.png&quot; alt=&quot;Markdown Monster icon&quot; width=&quot;3200&quot; height=&quot;1600&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;After families selection, the detective Duck still needs to look at what they buy. The 750 selected families had access to a total of 92353 different products in their shopping center. These products are defined by their department (the place at which we find them) and by two different and non standard descriptive words sequences (commodity and sub-commodity). To be able to classify them the detective creates a function comparing both the commodity and the sub-commodity to a list of expressions from the lexical field of the grocery. He associates each expression to a certain grocery category. Since the products’ descriptions are atypical, he give them a “score of similarity” with the expressions in the list. The highest score, above a certain threshold determines the label of the product. He uses the Fuzzywuzzy library to calculate this score. Fuzzywuzzy is based on Levenshtein Distance to calculate the differences and similarities between string sequences.&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;hr /&gt;
 
-&lt;style&gt;
-    .img-container{
-        text-align: center;
-    }
-&lt;/style&gt;
+&lt;!--CHAPTER 2: --&gt;
+&lt;h4&gt;Chaptre 2.  Profiling is not a piece of cake..&lt;/h4&gt;
 
-&lt;body&gt;
-&lt;div class=&quot;img-container&quot;&gt;
-&lt;img src=&quot;http://localhost:4000/assets/images/BAD-products_trans_label.png&quot; alt=&quot;Markdown Monster icon&quot; width=&quot;3200&quot; height=&quot;1600&quot; /&gt;
-&lt;/div&gt;
-&lt;/body&gt;
+&lt;p&gt;
+   Now the data are ready for the analysis, the detective Duck is excited about facing the real challenge: profile prediction using machine learning. His goal is to extract the main consumption patterns of the shopping center's clients, and correlate them to their demographic features. For this purpose, he is already developping several clever strategies. Despite all his efforts, the investigation will turn out to be harder than he tought when venturing into this case. Looking at the data, he will quickly regret ever leaving his cozy pond...
+&lt;/p&gt;
 
-&lt;h2 id=&quot;chapter-2-profiling-is-not-a-piece-of-cake&quot;&gt;Chapter 2. Profiling is not a piece of cake.&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;First round of predictions.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;i&gt;Demographic and shopping trend correlations&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt;
+   After having prepared the data for analysis, Detective Duck seek for major correlation patterns. He produces the following matrix to show the relation strength in between demographic features, spendings and the products quantities for the most common labels. As he expected, all the features linked to the household composition are highly correlated. 
+Indeed in the matrix the scores for household size correlated to the marital status and the household size correlated to the number of kids are both 0.91.
+&lt;/p&gt;
 
-&lt;p&gt;Now the data are ready for the analysis, the detective Duck is excited about facing the real challenge: profile prediction using machine learning. His goal is to extract the main consumption patterns of the shopping center’s clients, and correlate them to their demographic features. For this purpose, he is already developping several clever strategies. Despite all his efforts, the investigation will turn out to be harder than he tought when venturing into this case. Looking at the data, he will quickly regret ever leaving his cozy pond…&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;First round prediction&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Demographic and shopping trend correlations&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;After having prepared the data for analysis, Detective Duck seek for major correlation patterns. He produces the following matrix to show the relation strength in between demographic features, spendings and the products quantities for the most common labels. As he expected, all the features linked to the household composition are highly correlated. 
-Indeed in the matrix the scores for household size correlated to the marital status and the household size correlated to the number of kids are both 0.91.&lt;/p&gt;
-
-&lt;style&gt;
-    .img-container{
-        text-align: center;
-    }
-&lt;/style&gt;
-
-&lt;body&gt;
-&lt;div class=&quot;img-container&quot;&gt;
-&lt;img src=&quot;http://localhost:4000/assets/images/BAD-correlation-matrix.png&quot; alt=&quot;Markdown Monster icon&quot; width=&quot;3200&quot; height=&quot;1600&quot; /&gt;
-&lt;/div&gt;
-&lt;/body&gt;
+&lt;p&gt;&lt;img class=&quot;center&quot; src=&quot;http://localhost:4000/assets/images/BAD-correlation-matrix.png&quot; alt=&quot;Markdown Monster icon&quot; width=&quot;3200&quot; height=&quot;1600&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Thu, 12 Dec 2019 00:00:00 +0100</pubDate>
         <link>http://localhost:4000/2019/12/12/data_story/</link>
