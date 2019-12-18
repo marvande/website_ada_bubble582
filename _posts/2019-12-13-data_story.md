@@ -64,7 +64,7 @@ Now detective Duck is faced with the real challenge. He aims to try and extract 
 <body>
 <div class = 'img-container'>
 <img src="{{ "/assets/images/BAD-products_trans_label.png" | absolute_url }}"
-    alt="Markdown Monster icon" width = "200" height = "100" />
+    alt="Markdown Monster icon" width = "400" height = "200" />
 </div>
 </body>
 
