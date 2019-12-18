@@ -25,7 +25,7 @@ Living in a time and age where every piece of our data is stored and analysed, t
 
 ## Chapter 1. A rocky start to a rocky investigation. 
 
-*A Dunnhumby dataset.*
+**A Dunnhumby dataset.** QW
 
 The dataset detective Duck was provided by the consumer advocacy group, from now on referred to as the C.A.G, is owned by Dunhumby, which is an american data science company. This dataset includes the results of a two years long study, over 2500 voluntary households. Detective Duck knows that companies use harvested data to perform targeted marketing, but using his skills in data analysis, he plans to find out exactly what can be found out about clients. He expects to find that consumption habits will be influenced by demographic characteristics. For example, he suspects that the income category will influence the amount and price range of groceries bought weekly. 
 
