@@ -17,6 +17,7 @@ p{
     text-align: justify;
 }
 </style>
+<font size="2.5">
 
 <!--PREFACE: -->
 <h4>Chapter 0. Preface.</h4>
@@ -51,7 +52,7 @@ Living in a time and age where every piece of our data is stored and analysed, t
    Detective Duck had to face a main issue when preprocessing his demographic data. Indeed, over the 2500 households studied by Dunhumby, only 780 provided their demographic information. Among these 780 families, around 750 were selected after cleaning. At this moment, suspicions started to arise in detective Duck's mind. A too small amount of data might cause troubles. Nevertheless, after a long night of working and cursing, the data was finally usable and analysable.
 </p>
 
-<img class="center" src="{{ "/assets/images/pic09.png" | absolute_url }}" alt="Markdown Monster icon" width = "400" height = "300" />
+<img class="center" src="{{ "/assets/images/pic09.png" | absolute_url }}" alt="Markdown Monster icon" width = "250" height = "125" />
 <p>
 Now detective Duck is faced with the real challenge. He aims to try and extract the main consumption patterns of the clients and correlate them to their demographic features. For this, he developped several strategies as the investigation turned out to be harder than he tought when venturing into this case. Looking at the data, he quickly regretted ever leaving his cozy pond. 
 </p>
@@ -62,8 +63,9 @@ Now detective Duck is faced with the real challenge. He aims to try and extract 
    After families selection, the detective Duck still needs to look at what they buy. The 750 selected families had access to a total of 92353 different products in their shopping center. These products are defined by their department (the place at which we find them) and by two different and non standard descriptive words sequences (commodity and sub-commodity). To be able to classify them the detective creates a function comparing both the commodity and the sub-commodity to a list of expressions from the lexical field of the grocery. He associates each expression to a certain grocery category. Since the products' descriptions are atypical, he give them a "score of similarity" with the expressions in the list. The highest score, above a certain threshold determines the label of the product. He uses the Fuzzywuzzy library to calculate this score. Fuzzywuzzy is based on Levenshtein Distance to calculate the differences and similarities between string sequences. 
 </p>
 
-<img class="center" src="{{ "/assets/images/BAD-products_trans_label.png" | absolute_url }}"
-    alt="Markdown Monster icon" width = "3200" height = "1600" />
+<img class="center" src="{{ "/assets/images/BAD-products_trans_label.png" | absolute_url }}" alt="Markdown Monster icon" width = "900" height = "700" />
+ 
+
 
 <br/>
 <hr/>
@@ -81,8 +83,7 @@ Now detective Duck is faced with the real challenge. He aims to try and extract 
 Indeed in the matrix the scores for household size correlated to the marital status and the household size correlated to the number of kids are both 0.91.
 </p>
 
-<img class="center" src="{{ "/assets/images/BAD-correlation-matrix.png" | absolute_url }}"
-    alt="Markdown Monster icon" width = "3200" height = "1600" />
+<img class="center" src="{{ "/assets/images/BAD-correlation-matrix.png" | absolute_url }}" alt="Markdown Monster icon" width = "600" height = "400" />
 
 <p>
 The mean and yearly spending are also well correlated (0.7) with the different products quantities. This probably means that, most of the families buy in average similar proportions of the different products labels per week and per year. 
@@ -102,11 +103,16 @@ Duck needs to change his plan of attack in this second prediction attempt. He de
 Then he uses different strategies to cluster his data and select the most interesting one :
 <p>
 <p>
-His first idea is to cluster households in function of the main products they buy. He identifies the best number of clusters, which is in between 5 and 9, with elbow. Then he applies K-mean to create 7 households clusters. He uses a threshold at ⅓  of the households. Thus, a product is characterizing a cluster if and only if, at least one third of the households has bought this product. Two of the final clusters contain only one family. Interestingly 4 different clusters are characterized by the dairy products, bananas they buy. Duck wonders if the type of milk can give a hint on who is buying it. The biggest cluster, 1065 familis, is made of households buying unknown products. For the detective, it means that these households are not characterized by any common product. 
+<span>&#8226;</span> His first idea is to cluster households in function of the main products they buy. He identifies the best number of clusters, which is in between 5 and 9, with elbow. Then he applies K-mean to create 7 households clusters. He uses a threshold at ⅓  of the households. Thus, a product is characterizing a cluster if and only if, at least one third of the households has bought this product. Two of the final clusters contain only one family. Interestingly 4 different clusters are characterized by the dairy products, bananas they buy. Duck wonders if the type of milk can give a hint on who is buying it. The biggest cluster, 1065 familis, is made of households buying unknown products. For the detective, it means that these households are not characterized by any common product.
 <p>
 <p>
-His second idea is reducing the dataset of "the average amount of products bought per label by the household"'s dimensions using SVD. After the reduction, two dimensions explain 58% of the variance. The detective then plots the data along these two dimensions to see if he can observe some clusters. However he can not see clear clusters that could predict a certain demographic. 
+<span>&#8226;</span> His second idea is reducing the dataset of <i>the average amount of products bought per label by the household</i> 's dimensions using SVD. After the reduction, two dimensions explain 58% of the variance. The detective then plots the data along these two dimensions to see if he can observe some clusters. However he can not see clear clusters that could predict a certain demographic. 
 <p>
 
-<img class="center" src="{{ "/assets/images/BAD-corrplots.png" | absolute_url }}" alt="Markdown Monster icon" width = "3600" height = "2000" />
+<img class="center" src="{{ "/assets/images/BAD-corrplots.png" | absolute_url }}" alt="Markdown Monster icon" width = "800" height = "600" />
 
+<p>
+To make sure that this visualization does not hide any clusters, we use elbow to find a good cluster’s number. However no good clustering arise from this analysis.
+<p>
+
+<img class="center" src="{{ "/assets/images/BAD-elbow.png" | absolute_url }}" alt="Markdown Monster icon" width = "500" height = "300" />
