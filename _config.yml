@@ -12,10 +12,8 @@ url: https://projectadabubble582.netlify.com/
 twitter_username: ''
 default_img: /assets/images/pic06.jpg
 social:
-  - name: linkedin
-    url: https://www.linkedin.com/in/marijn-van-der-meer/
   - name: github
-    url: https://github.com/marvande
+    url: https://github.com/marvande/epfl-ada-2019-project-bubble582
 
 # Contact settings
 contact_img: /assets/images/pic06.jpg
