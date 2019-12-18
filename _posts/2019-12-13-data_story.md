@@ -80,3 +80,15 @@ Now detective Duck is faced with the real challenge. He aims to try and extract 
 
    After having prepared the data for analysis, Detective Duck seek for major correlation patterns. He produces the following matrix to show the relation strength in between demographic features, spendings and the products quantities for the most common labels. As he expected, all the features linked to the household composition are highly correlated. 
 Indeed in the matrix the scores for household size correlated to the marital status and the household size correlated to the number of kids are both 0.91.
+
+<style>
+    .img-container{
+        text-align: center;
+    }
+</style>
+<body>
+<div class = 'img-container'>
+<img src="{{ "/assets/images/BAD-correlation-matrix.png" | absolute_url }}"
+    alt="Markdown Monster icon" width = "3200" height = "1600" />
+</div>
+</body>
