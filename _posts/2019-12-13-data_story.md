@@ -70,7 +70,7 @@ Now detective Duck is faced with the real challenge. He aims to try and extract 
 
 
 
-## Chapter 2. Profiling is not a piece of cake. 
+## Chapter 2. Profiling is not a piece of cake.
 
    Now the data are ready for the analysis, the detective Duck is excited about facing the real challenge: profile prediction using machine learning. His goal is to extract the main consumption patterns of the shopping center's clients, and correlate them to their demographic features. For this purpose, he is already developping several clever strategies. Despite all his efforts, the investigation will turn out to be harder than he tought when venturing into this case. Looking at the data, he will quickly regret ever leaving his cozy pond...
 
@@ -92,3 +92,10 @@ Indeed in the matrix the scores for household size correlated to the marital sta
     alt="Markdown Monster icon" width = "3200" height = "1600" />
 </div>
 </body>
+
+The mean and yearly spending are also well correlated (0.7) with the different products quantities. This probably means that, most of the families buy in average similar proportions of the different products labels per week and per year. 
+For Duck, this first analysis is a good new. It means that the retailer can not find any correlation in between the product's type and the household's features. Of course, everybody needs to buy vegetables, meat, dairy products and beverages. That is why he can not find interesting patterns among the most common commodities. Outliers, in these distributions, might represent extreme diets (like vegetarianism or allergies). 
+
+*First random forest to predict family's profile*   
+      
+Duck is not the kind of people giving up when he gets weak correlations, he is a resourceful detective. He tries to build a predictive model to effectively show if it is possible to infer the family’s profile from its consumption. First he fits a decision tree with a 0.25/0.75 test/training split. The results for this prediction work are pretty bad. The ROC AUC score barely exceeds the baseline score. The detective can not pretend that, from this dataset the retailer could infer satisfying profiles of his customers. However the dataset ended up to be importantly reduced after filtering the households. Since machine learning models are rapidly limited by the amount of data, Duck is not surprised to see his predictions failing. Detective Duck has not said his last word...
