@@ -83,3 +83,13 @@ Indeed in the matrix the scores for household size correlated to the marital sta
 
 <img class="center" src="{{ "/assets/images/BAD-correlation-matrix.png" | absolute_url }}"
     alt="Markdown Monster icon" width = "3200" height = "1600" />
+
+<p>
+The mean and yearly spending are also well correlated (0.7) with the different products quantities. This probably means that, most of the families buy in average similar proportions of the different products labels per week and per year. 
+For Duck, this first analysis is a good new. It means that the retailer can not find any correlation in between the product's type and the household's features. Of course, everybody needs to buy vegetables, meat, dairy products and beverages. That is why he can not find interesting patterns among the most common commodities. Outliers, in these distributions, might represent extreme diets (like vegetarianism or allergies). 
+</p>
+
+<p><i>First random forest to predict family's profile</i></p>
+<p>
+Duck is not the kind of people giving up when he gets weak correlations, he is a resourceful detective. He tries to build a predictive model to effectively show if it is possible to infer the family’s profile from its consumption. First he fits a decision tree with a 0.25/0.75 test/training split. The results for this prediction work are pretty bad. The ROC AUC score barely exceeds the baseline score. The detective can not pretend that, from this dataset the retailer could infer satisfying profiles of his customers. However the dataset ended up to be importantly reduced after filtering the households. Since machine learning models are rapidly limited by the amount of data, Duck is not surprised to see his predictions failing. Detective Duck has not said his last word...
+</p>

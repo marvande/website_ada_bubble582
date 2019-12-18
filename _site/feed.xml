@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 18 Dec 2019 14:20:52 +0100</pubDate>
-    <lastBuildDate>Wed, 18 Dec 2019 14:20:52 +0100</lastBuildDate>
+    <pubDate>Wed, 18 Dec 2019 14:22:45 +0100</pubDate>
+    <lastBuildDate>Wed, 18 Dec 2019 14:22:45 +0100</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -89,6 +89,16 @@ Indeed in the matrix the scores for household size correlated to the marital sta
 &lt;/p&gt;
 
 &lt;p&gt;&lt;img class=&quot;center&quot; src=&quot;http://localhost:4000/assets/images/BAD-correlation-matrix.png&quot; alt=&quot;Markdown Monster icon&quot; width=&quot;3200&quot; height=&quot;1600&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;
+The mean and yearly spending are also well correlated (0.7) with the different products quantities. This probably means that, most of the families buy in average similar proportions of the different products labels per week and per year. 
+For Duck, this first analysis is a good new. It means that the retailer can not find any correlation in between the product's type and the household's features. Of course, everybody needs to buy vegetables, meat, dairy products and beverages. That is why he can not find interesting patterns among the most common commodities. Outliers, in these distributions, might represent extreme diets (like vegetarianism or allergies). 
+&lt;/p&gt;
+
+&lt;p&gt;&lt;i&gt;First random forest to predict family's profile&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt;
+Duck is not the kind of people giving up when he gets weak correlations, he is a resourceful detective. He tries to build a predictive model to effectively show if it is possible to infer the family’s profile from its consumption. First he fits a decision tree with a 0.25/0.75 test/training split. The results for this prediction work are pretty bad. The ROC AUC score barely exceeds the baseline score. The detective can not pretend that, from this dataset the retailer could infer satisfying profiles of his customers. However the dataset ended up to be importantly reduced after filtering the households. Since machine learning models are rapidly limited by the amount of data, Duck is not surprised to see his predictions failing. Detective Duck has not said his last word...
+&lt;/p&gt;
 </description>
         <pubDate>Thu, 12 Dec 2019 00:00:00 +0100</pubDate>
         <link>http://localhost:4000/2019/12/12/data_story/</link>
