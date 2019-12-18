@@ -36,6 +36,7 @@ author:
 people:
   - name: Lou Locci
     pic: 2
+    background: Life Science and Engineering
     social:
       - title: github
         url: https://github.com/Loulocci
@@ -44,6 +45,7 @@ people:
 
   - name: Amandine Goffeney
     pic: 1
+    background: Life Science and Engineering
     social:
       - title: github
         url: https://github.com/amandinegoffeney
@@ -52,6 +54,7 @@ people:
 
   - name: Marijn van der Meer
     pic: 3
+    background: Data Science
     social:
       - title: github
         url: https://github.com/marvande
@@ -60,6 +63,7 @@ people:
 
   - name: Marco Pietro Abrate
     pic: 4
+    background: Data Science
     social:
       - title: github
         url: https://github.com/marcoabrate

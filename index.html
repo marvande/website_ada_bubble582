@@ -19,6 +19,8 @@ pagination:
   <div class="grid-xlarge">
     <header class="major">
       <br />
+      <br />
+      <br />
       <h2 align="center">Tell me what you buy, I will tell you who you are.</h2>
       <h3 align="center">Applied Data Analysis EPFL, Autumn 2019</h3>
       <p align="center">
@@ -26,7 +28,7 @@ pagination:
         <br />
       </p>
     </header>
-    <a href="#" class="image main"><img src="{{ " /images/pic06.jpg " | absolute_url }}" alt="" /></a>
+    <a href="#" class="image main"><img src="{{ "assets/images/pic06.jpg" | absolute_url }}" alt="" /></a>
     <hr>
     <header>
       <h4>Introduction:</h4>
@@ -40,7 +42,7 @@ pagination:
   <!--Posts: -->
   <div class="grid-xlarge">
   <header>
-    <hr>
+    <hr />
     <h4>Data Story:</h4>
   </header>
     <div class="posts__container" itemscope itemtype="http://schema.org/Blog" data-columns>
@@ -57,9 +59,9 @@ pagination:
 <!-- Team Section -->
 <div class="grid-xlarge">
   <header>
-    <hr>
+    <hr />
     <h4>Our amazing team:</h4>
-    <br>
+    <br/>
   </header>
   <div class="container-fluid">
     <div class="row justify-content-md-center">
@@ -69,6 +71,7 @@ pagination:
             <div class = 'container'>
               <img src="assets/images/{{ member.pic }}.jpg" class="img-circle" width="210" height="210" alt="">
               <h5>{{ member.name }}</h5>
+              <p class="text-muted">{{ member.background }}</p>
               <ul class="list-inline social-buttons">
                 {% for network in member.social %}
                   <li>{{ network.title }} : 
