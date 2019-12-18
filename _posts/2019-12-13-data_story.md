@@ -82,39 +82,45 @@ From this, he learned that there is some high correlation between demographic in
 <p><em><strong> A duck in a random forest.</strong></em></p> 
 
 <p>
-Our favourite duck is not the kind of duck that gives up when discovering weak correlations, the consumer group hired him because he is the best in the field. Thus, he decided to follow another path and to seek help from Machine Learning, more specifically, Random Forests. He built a predictive model that would hopefully find things, he as a simple duck, could not. First, he fitted a decision tree on the monthly product quantities bought by all households with avlaible demographic information. The results for this were regretfully bad. So bad that Duck could have just randomly set a random demographic parameter for each household and the result would have been better (e.g. the ROC AUC score barely exceeded the baseline score). The same occured when fitting a random forest model. Thus, he concluded that, using only labels, there was not enough data to train a good machine learning model and infer satisfying customer profiles. Disappointed but not surprised as he had already suspected something of the sort would happen (see section <i>Know thy households</i>), Duck resigned to pursue another investigation path, as he had not yet said his last word. 
+Our favourite duck is not the kind of duck that gives up when discovering weak correlations, the consumer group hired him because he is the best in the field. Thus, he decided to follow another path and to seek help from Machine Learning, more specifically, Random Forests. He built a predictive model that would hopefully find things, he as a simple duck, could not. First, he fitted a decision tree on the monthly product quantities bought by all households with available demographic information. The results for this were regretfully bad. So bad that Duck could have just randomly set a random demographic parameter for each household and the result would have been better (e.g. the ROC AUC score barely exceeded the baseline score). The same occurred when fitting a random forest model. Thus, he concluded that, using only labels, there was not enough data to train a good machine learning model and infer satisfying customer profiles. Disappointed but not surprised as he had already suspected something of the sort would happen (see section <i>Know thy households</i>), Duck resigned to pursue another investigation path, as he had not yet said his last word.
 </p>
 
 <img class="center" src="{{ "/assets/images/pic10.jpg" | absolute_url }}" alt="Markdown Monster icon" width = "600" height = "400" />
 
-<p><em><strong>Smart clustering.</strong></em></p>   
+<p><em><strong>Smart clustering by a strategic duck.</strong></em></p>   
 <p>
-Duck needed to change his plan of action as he had promised to deliver. Thus, he dediced to search for typical grocery carts present in the data. From this, he hoped to be able to relate them to demographic parameters. To do this, he tossed aside the labels and focused on the products themselves. 
-<p>
-<p><i>Being a strategic Duck</i></p>
-<p>
-At that time, he uses different strategies to cluster his data and select the most interesting one :
-<p>
-<p>
-<span>&#8226;</span> <em>I)</em>  His first idea is to cluster households in function of the main products they buy. He identifies the best number of clusters, which is in between 5 and 9, with elbow. Then he applies K-mean to create 7 households clusters. He uses a threshold at ⅓  of the households. Thus, a product is characterizing a cluster if and only if, at least one third of the households has bought this product. Two of the final clusters contain only one family. Interestingly 4 different clusters are characterized by the dairy products, bananas they buy. Duck wonders if the type of milk can give a hint on who is buying it. The biggest cluster, 1065 familis, is made of households buying unknown products. For the detective, it means that these households are not characterized by any common product.
-<p>
-<p>
-<span>&#8226;</span> <em>II)</em>  His second idea is reducing the dataset of <i>the average amount of products bought per label by the household</i> 's dimensions using SVD. After the reduction, two dimensions explain 58% of the variance. The detective then plots the data along these two dimensions to see if he can observe some clusters. However he can not see clear clusters that could predict a certain demographic. 
+Duck needed to change his plan of action as he had promised to deliver. Thus, he decided to search for typical grocery carts present in the data. From this, he hoped to be able to relate them to demographic parameters. To look for typical carts, he pursued several ideas.
+</p>
 
+<p><i>Product clusters:</i></p>
+
+<p>His first idea was to toss aside labels and focus on specific products. So, he looked to cluster households by the exact weekly product quantities they bought, the hope being that different typical weekly shopping carts would appear (e.g. a weekly shopping cart with bananas and cheddar cheese). To identify the ideal number of clusters in the data, he used the elbow method and found a number between 5 and 9. This he used with k-means and created 7 households clusters. To identify what those clusters bought weekly, he decided that for a product to caracterize a cluster, it had to be bought by at least a third of the households in the clutster (a very generous threshold).  Looking at the results, Duck saw that two clusters contained only a single household and that one contained around a 1000 but had no product in common and dismissed those. Furthermore, the remaining clusters had either bananas or dairy as their caracteristic product. From this, Duck started to wonder if this dataset was a cruel joke that someone had played on him, or wether this shopping center was frequented by what seemed to be a troop of monkeys. Detective Duck concluded that though labels were too vague, clustering on products was probably too precise as there were several product IDs for the same type of product (e.g. 5 different milk IDs). So though some households maybe bought the same weekly quantity of milk, because they bought a different brand there carts were not assimilated as the same. 
+</p>
+    <br/>
+    <b>INSERT CLUSTER IMAGE HERE</b>
+    <b>CONTINUE EDITING FROM HERE</b>
+
+<p>
+
+<p><i>Department clusters:</i></p>
+
+<p>
+Barely recovered from his banana and milk experience, Duck's second idea was to look for clusters in the departments of the products. After an SVD on the weekly average amount of products bought per deparments, the detective found that two dimensions explain 96% of total variance. So, he plotted the data along these two dimensions and colored it according to different demographic labels to search for clusters. 
+</p>
 
 <img class="center" src="{{ "/assets/images/BAD-corrplots.png" | absolute_url }}" alt="Markdown Monster icon" width = "800" height = "600" />
 
+<p>Though visually he could not find any, he still wanted to be sure that none were hiding so he applied the elbow method for a cluster number from 2 to 20. o make sure that this visualization does not hide any clusters, we use elbow to find a good cluster’s number. However no good clustering arise from this analysis.</p>
 
-To make sure that this visualization does not hide any clusters, we use elbow to find a good cluster’s number. However no good clustering arise from this analysis.
-<p>
 
 <img class="center" src="{{ "/assets/images/BAD-elbow.png" | absolute_url }}" alt="Markdown Monster icon" width = "500" height = "300" />
 
+<p><i>Redefining labels:</i></p>
 <p>
-<span>&#8226;</span> <em>III)</em>  In a third time, Duck reproduces the second strategy but taking a step back, and looking at the department instead of the labels. Elbow finds an ideal clustering for 4 clusters. Interestingly the K-mean clustering shows 4 groups mainly characterized by the quantities bought in the grocery department. 
-<p>
+In a third time, Duck reproduces the second strategy but taking a step back, and looking at the department instead of the labels. Elbow finds an ideal clustering for 4 clusters. Interestingly the K-mean clustering shows 4 groups mainly characterized by the quantities bought in the grocery department. 
+</p>
 <img class="center" src="{{ "/assets/images/BAD-clusters.png" | absolute_url }}" alt="Markdown Monster icon" width = "450" height = "225" />
-    
+
 
 <p><i>Best prediction further analysis</i></p>
 <p>
