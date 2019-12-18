@@ -56,9 +56,27 @@ Now detective Duck is faced with the real challenge. He aims to try and extract 
 
    After families selection, the detective Duck still needs to look at what they buy. The 750 selected families had access to a total of 92353 different products in their shopping center. These products are defined by their department (the place at which we find them) and by two different and non standard descriptive words sequences (commodity and sub-commodity). To be able to classify them the detective creates a function comparing both the commodity and the sub-commodity to a list of expressions from the lexical field of the grocery. He associates each expression to a certain grocery category. Since the products' descriptions are atypical, he give them a "score of similarity" with the expressions in the list. The highest score, above a certain threshold determines the label of the product. He uses the Fuzzywuzzy library to calculate this score. Fuzzywuzzy is based on Levenshtein Distance to calculate the differences and similarities between string sequences. 
 
+<style>
+    .img-container{
+        text-align: center;
+    }
+</style>
+<body>
+<div class = 'img-container'>
+<img src="{{ "/assets/images/BAD-products_trans_label.png" | absolute_url }}"
+    alt="Markdown Monster icon" width = "200" height = "300" />
+</div>
+</body>
+
+
 
 ## Chapter 2. Profiling is not a piece of cake. 
 
    Now the data are ready for the analysis, the detective Duck is excited about facing the real challenge: profile prediction using machine learning. His goal is to extract the main consumption patterns of the shopping center's clients, and correlate them to their demographic features. For this purpose, he is already developping several clever strategies. Despite all his efforts, the investigation will turn out to be harder than he tought when venturing into this case. Looking at the data, he will quickly regret ever leaving his cozy pond...
 
 **First round prediction**
+
+*Demographic and shopping trend correlations*
+
+   After having prepared the data for analysis, Detective Duck seek for major correlation patterns. He produces the following matrix to show the relation strength in between demographic features, spendings and the products quantities for the most common labels. As he expected, all the features linked to the household composition are highly correlated. 
+Indeed in the matrix the scores for household size correlated to the marital status and the household size correlated to the number of kids are both 0.91.
