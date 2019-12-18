@@ -28,7 +28,8 @@ Due to rumours about the troublesome ability of shopping centers to infer consum
 <img class="center" src="{{ "/assets/images/pic08.png" | absolute_url }}" alt="Markdown Monster icon" width = "200" height = "150" />
 
 <p>
-Living in a time and age where every piece of our data is stored and analysed, the consumer advocacy group wonders what information retailers can gather and infer about consumers. To answer their question, detective Duck only gets information about a two year shopping spree of a group of 2500 clients of an unknown shopping center in the US. Based on this data, he seeks to identify possible links, if they exist, between demographic information (e.g. marital status, income, number of children, etc) and  purchase patterns. In other words, he would like to see how "easy" and how precise it is for retailers to infer a specific customer profile based on what their shopping habits as this could lead to easy targeted marketing. Luckily, detective Duck has followed the autumn 2019 Applied Data Analysis at the EPFL and counts on applying his newly aquired knowledge to this case. 
+Living in a time and age where every piece of our data is stored and analysed, the consumer advocacy group wondered what information retailers can gather and infer about consumers. Nevertheless, to answer their question, the group could only provide Detective Duck with information about a two year shopping spree of 2500 clients of an unknown shopping center based in the US. Based on this data, Duck was tasked with identifying possible links, if they exist, between demographic information (e.g. marital status, income, number of children, etc) and purchase patterns. In other words, he needed to find ou how easy it is for retailers to infer a specific customer profile based on their shopping habits. This was crucial to the consumer advocacy group as precise customer profiles lead to targeted marketing and loss of privacy. Luckily, Detective Duck followed the autumn 2019 Applied Data Analysis course at the EPFL and applied his newly aquired knowledge with diligence to this case. 
+
 </p>
 
 <br/>
@@ -38,66 +39,57 @@ Living in a time and age where every piece of our data is stored and analysed, t
 <p><em><strong>A Dunnhumby dataset.</strong></em></p> 
 
 <p>
-    The consumer advocacy group (also called G.A.C) provided the detective Duck  with a dataset owned by Dunhumby, an american data science company. This dataset includes the results of a two years long study, over 2500 voluntary households. Detective Duck knows that companies use harvested data to perform targeted marketing. Using his skills in data analysis, he plans to find out exactly what can be predicted out about the customer's personnal information. He expects to observe an relation in between the clients's consumption habits and their demographic characteristics. For example, he suspects that the income category will influence the amount and price range of groceries bought per week. 
+    The consumer advocacy group provided Detective Duck with a dataset owned by Dunhumby, an American Data Science company. This included the results of a two years long study, over 2500 voluntary households. When looking at the dataset, Duck quickly realised that this dataset was quite big and had a lot of miscellaneous information. Nevertheless, our favourite detective has learned that when faced with this challenge, one needs to start by pre-processing and cleaning the available information. For this, he kept only households which showed coherent and sufficient demographic data. Furthermore, he labelled all 10'000 products into precise grocery categories shown below. 
+        
+        <img class="center" src="{{ "/assets/images/BAD-products_trans_label.png" | absolute_url }}" alt="Markdown Monster icon" width = "900" height = "700" /> 
 </p>
 
-<p><em><strong>Preprocessing.</strong></em></p> 
+<p><em><strong>Know thy households.</strong></em></p> 
 
 <p>
-   When facing a huge amount of data, detective Duck has learned to start by preprocessing and cleaning the available information. For this, he keeps only households which portrayed coherent and sufficient demographic data. In a second time he labels the products with precise categories refering to grocery shopping.
-</p>
-<p><em><strong>Demographics.</strong></em></p> 
+   Before starting to hunt for clues, Detective Duck first had to know what kind of households were present in his data. This is where he had his first schock of the investigation. Indeed, over the 2500 households studied by Dunhumby, only 750 provided their demographic information and remained after cleaning. At this moment, suspicions started to arise in detective Duck's mind that the consumer advocacy group had provided him with quite a challenge. Undoubtetly, a small dataset would cause troubles when trying to draw predictions. Duck regretted ever leaving his cozy pond. 
 
-<p>
-   Detective Duck had to face a main issue when preprocessing his demographic data. Indeed, over the 2500 households studied by Dunhumby, only 780 provided their demographic information. Among these 780 families, around 750 were selected after cleaning. At this moment, suspicions started to arise in detective Duck's mind. A too small amount of data might cause troubles. Nevertheless, after a long night of working and cursing, the data was finally usable and analysable.
 </p>
 
 <img class="center" src="{{ "/assets/images/pic09.png" | absolute_url }}" alt="Markdown Monster icon" width = "250" height = "125" />
 <p>
-Now detective Duck is faced with the real challenge. He aims to try and extract the main consumption patterns of the clients and correlate them to their demographic features. For this, he developped several strategies as the investigation turned out to be harder than he tought when venturing into this case. Looking at the data, he quickly regretted ever leaving his cozy pond. 
-</p>
-
-<p><em><strong>Products.</strong></em></p> 
-
-<p>
-   After families selection, the detective Duck still needs to look at what they buy. The 750 selected families had access to a total of 92353 different products in their shopping center. These products are defined by their department (the place at which we find them) and by two different and non standard descriptive words sequences (commodity and sub-commodity). To be able to classify them the detective creates a function comparing both the commodity and the sub-commodity to a list of expressions from the lexical field of the grocery. He associates each expression to a certain grocery category. Since the products' descriptions are atypical, he give them a "score of similarity" with the expressions in the list. The highest score, above a certain threshold determines the label of the product. He uses the Fuzzywuzzy library to calculate this score. Fuzzywuzzy is based on Levenshtein Distance to calculate the differences and similarities between string sequences. 
-</p>
-
-<img class="center" src="{{ "/assets/images/BAD-products_trans_label.png" | absolute_url }}" alt="Markdown Monster icon" width = "900" height = "700" />
- 
-
+Still, Duck aimed to extract the client's main consumption patterns and correlate them to their demographic features. For this, he developped several strategies that will be developped below. </p>
 
 <br/>
 <hr/>
 <!--CHAPTER 2: -->
-<h4>Chaptre 2.  Profiling is not a piece of cake..</h4>
+<h4>Chaptre 2. Profiling is not a piece of cake..</h4>
 
 <p>
-   Now the data are ready for the analysis, the detective Duck is excited about facing the real challenge: profile prediction using machine learning. His goal is to extract the main consumption patterns of the shopping center's clients, and correlate them to their demographic features. For this purpose, he is already developping several clever strategies. Despite all his efforts, the investigation will turn out to be harder than he tought when venturing into this case. Looking at the data, he will quickly regret ever leaving his cozy pond...
+   Once the data was ready for analysis, Detective Duck was excited to face the real challenge: customer profile hunting. 
 </p>
 
-<p><em><strong>First round of predictions.</strong></em></p> 
-<p><i>Demographic and shopping trend correlations</i></p>
+<p><em><strong> A hunt for correlations.</strong></em></p> 
 <p>
-   After having prepared the data for analysis, Detective Duck seek for major correlation patterns. He produces the following matrix to show the relation strength in between demographic features, spendings and the products quantities for the most common labels. As he expected, all the features linked to the household composition are highly correlated. 
-Indeed in the matrix the scores for household size correlated to the marital status and the household size correlated to the number of kids are both 0.91.
+   Detective Duck seekd for major correlation patterns in the whole data. After some coding, he produced the following matrix to illustrate the relation strength in between demographic features, spendings and the products quantities for the most common labels. 
 </p>
 
 <img class="center" src="{{ "/assets/images/BAD-correlation-matrix.png" | absolute_url }}" alt="Markdown Monster icon" width = "600" height = "400" />
 
 <p>
-The mean and yearly spending are also well correlated (0.7) with the different products quantities. This probably means that, most of the families buy in average similar proportions of the different products labels per week and per year. 
-For Duck, this first analysis is a good new. It means that the retailer can not find any correlation in between the product's type and the household's features. Of course, everybody needs to buy vegetables, meat, dairy products and beverages. That is why he can not find interesting patterns among the most common commodities. Outliers, in these distributions, might represent extreme diets (like vegetarianism or allergies). 
+From this, he learned that there is some high correlation between demographic information. Specifically, household size is highly correlation to the number of kids and marital status. This did not surprise Duck as any good detective could have deduced that. Nevertheless, he noted in a part of his mind that most households with kids were married in this study. Furthermore, the mean and yearly spending were also correlated (0.7) with the different products quantities. This also did not raise any alarms, as spending more usually means buying more products in a grocery store. Nonetheless, Duck could not find any direct link between demographics and product quantities. Not satisfied with this result, he decided to pursue the matter further, as it seemed too easy. He speculated that no correlation between labels and demographics could mean that the labels were not specific enough, as all households probably just bought globally the same amount in the categories of vegetables, meat, dairy products, etc. Thus, in general, except for outliers with extreme diets, all households seem to buy from the same grocery categories. </p>
+
+<iframe src='https://gfycat.com/ifr/AdmiredGlumBluebreastedkookaburra' frameborder='0' scrolling='no' width='60%' height='60%' style='position:absolute;top:0;left:0;' allowfullscreen>
+</iframe>
+
+<br/>
+<hr/>
+<p><em><strong> A duck in a random forest.</strong></em></p> 
+
+<p>
+Our favourite duck is not the kind of duck that gives up when discovering weak correlations, the consumer group hired him because he is the best in the field. Thus, he decided to follow another path and to seek help from Machine Learning, more specifically, Random Forests. He built a predictive model that would hopefully find things, he as a simple duck, could not. First, he fitted a decision tree on the monthly product quantities bought by all households with avlaible demographic information. The results for this were regretfully bad. So bad that Duck could have just randomly set a random demographic parameter for each household and the result would have been better (e.g. the ROC AUC score barely exceeded the baseline score). The same occured when fitting a random forest model. Thus, he concluded that, using only labels, there was not enough data to train a good machine learning model and infer satisfying customer profiles. Disappointed but not surprised as he had already suspected something of the sort would happen (see section <i>Know thy households</i>), Duck resigned to pursue another investigation path, as he had not yet said his last word. 
 </p>
 
-<p><i>A random forest to predict family's profile</i></p>
-<p>
-Duck is not the kind of people giving up when he gets weak correlations, he is a resourceful detective. He tries to build a predictive model to effectively show if it is possible to infer the family’s profile from its consumption. First he fits a decision tree with a 0.25/0.75 test/training split. The results for this prediction work are pretty bad. The ROC AUC score barely exceeds the baseline score. The detective can not pretend that, from this dataset the retailer could infer satisfying profiles of his customers. However the dataset ended up to be importantly reduced after filtering the households. Since machine learning models are rapidly limited by the amount of data, Duck is not surprised to see his predictions failing. Detective Duck has not said his last word...
-</p>
+<img class="center" src="{{ "/assets/images/pic10.jpg" | absolute_url }}" alt="Markdown Monster icon" width = "600" height = "400" />
 
-<p><em><strong>Second round of predictions</strong></em></p>   
+<p><em><strong>Smart clustering.</strong></em></p>   
 <p>
-Duck needs to change his plan of attack in this second prediction attempt. He decides to focus on the typical cart itself rather than and overall consumption of the household. To do so he sorts the products and select the ⅔ of the most bought ones.
+Duck needed to change his plan of action as he had promised to deliver. Thus, he dediced to search for typical grocery carts present in the data. From this, he hoped to be able to relate them to demographic parameters. To do this, he tossed aside the labels and focused on the products themselves. 
 <p>
 <p><i>Being a strategic Duck</i></p>
 <p>
