@@ -133,9 +133,9 @@ The G.A.C might be interested.
 <img class="center" src="{{ "/assets/images/BAD-correlation-matrix2.png" | absolute_url }}" alt="Markdown Monster icon" width = "600" height = "400" />
 
 <!--CHAPTER 3: -->
+<p>
 <h4>Chaptre 3.  Time to report the results to the C.A.G.</h4>
-
-<p><em><strong>Discussion and conclusion with the C.A.G</strong></em></p>
+<p>
 
 <p><i>What detective Duck learned from this investigation</i></p>
 <p>
