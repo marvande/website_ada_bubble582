@@ -48,16 +48,16 @@ Living in a time and age when every piece of our data is stored and analysed, th
 <img class="center" src="{{ "/assets/images/products_trans_newlabel.png" | absolute_url }}" alt="Markdown Monster icon" width = "900" height = "700" /> 
 </p>
 
-<p><em><strong>Know thy households.</strong></em></p> 
+<p><em><strong>Getting to know the participants.</strong></em></p> 
 
 <p>
-   Before starting to hunt for clues, Detective Duck first had to know what kind of households were present in his data. That is when he was first shocked in his investigation. Indeed, after cleaning the 2500 households studied by Dunhumby, only 750 remained that provided their demographic information. At this moment, suspicions started to arise in detective Duck's mind that the consumer advocacy group had provided him with quite a challenge. Undoubtetly, such a small dataset would cause troubles when trying to draw predictions. Duck regretted ever leaving his cozy pond. 
+   Before starting to hunt for clues, Detective Duck needed know better the households participating to the study. Things started getting tricky for the first time in his investigation. Indeed, after cleaning the 2500 households studied by Dunhumby, only 750 remained that provided their demographic information. At this moment, doubt started to arise in detective Duck's mind. The consumer advocacy group had provided him with a hard task. Undoubtetly, such a small dataset would cause troubles when trying to draw predictions. Duck regretted ever leaving his cozy pond. 
 
 </p>
 
 <img class="center" src="{{ "/assets/images/pic09.png" | absolute_url }}" alt="Markdown Monster icon" width = "300" height = "150" />
 <p>
-Still, Duck aimed to extract the clients' main consumption patterns and correlate them with their demographic features. For this, he developped several strategies that will be developped below. </p>
+Still, Duck decided to extract the clients' main consumption patterns and to correlate them with their demographic features. For this, he developped several strategies that are explained below. </p>
 
 <br/>
 <hr/>
