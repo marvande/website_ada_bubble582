@@ -6,9 +6,122 @@
 </description>
     <link>http://localhost:4000</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 19 Dec 2019 15:29:01 +0100</pubDate>
-    <lastBuildDate>Thu, 19 Dec 2019 15:29:01 +0100</lastBuildDate>
+    <pubDate>Thu, 19 Dec 2019 16:41:56 +0100</pubDate>
+    <lastBuildDate>Thu, 19 Dec 2019 16:41:56 +0100</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>Additionnal information about the analysis.</title>
+        <description>&lt;!--Style used in the document: --&gt;
+&lt;style&gt;
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+p{
+    text-align: justify;
+}
+&lt;/style&gt;
+
+&lt;font size=&quot;2.5&quot;&gt;
+
+&lt;!--PREFACE: --&gt;
+&lt;h4&gt;Chapter 0. Preface.&lt;/h4&gt;
+&lt;p&gt;
+As in most cases, the people who collect the data are not the same as those who analyse them, and they are often not data analysis specialists. In Duck's investigation, it is not a different story. Thus, to be able to get useful information from the data, he first had to preprossess them, and search is a multitude of directions to get an idea of what he was manipulating.
+See below the additionnal analysis he could not present in the main blog.
+&lt;/p&gt;
+
+&lt;!--CHAPTER 1: --&gt;
+&lt;h4&gt;Chapter 1. Preprocessing of the data.&lt;/h4&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Households&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt; 
+&lt;p&gt;
+As you saw in the main blog, Duck filtered out about one third of the households. Here, you will find the answer to your obvious question : &quot;WHY?&quot;.
+First of all, to analyse the relationship between the purchase habits and the demographic data, he had to drop the households from the transaction table for which the demographic data were not given.
+Second, he tried to get an idea of the distributions. See below the graphs of the demographic information about the customers.
+&lt;p&gt;
+
+&lt;img class=&quot;center&quot; src=&quot;http://localhost:4000/assets/images/demographics_distribution.png&quot; alt=&quot;Markdown Monster icon&quot; width=&quot;600&quot; height=&quot;450&quot; /&gt;
+
+&lt;p&gt;
+As he did, you can see that the demographic data is not distributed uniformly. Indeed:
+&lt;ul&gt;
+    &lt;li&gt;most of our households are between 35-54 years old.&lt;/li&gt;
+    &lt;li&gt;the majority of households have a size 1 or 2.&lt;/li&gt;
+    &lt;li&gt;most people earn between 35K and 75K (note that the average American income is 50K)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;
+After that, he noticed some inconsistencies. His conclusions were the following:
+&lt;ul&gt;
+    &lt;li&gt;the marital status is always coherent with the household size and the number of kids. In these cases where the household composition is wrong, let's just discard that information.&lt;/li&gt;
+    &lt;li&gt;there are some incongruities in the household size / number of kids when the marital status is Single, so let's discard these entries.&lt;/li&gt;
+    &lt;li&gt;if the marital status is Unknown, we fall back on the household size / number of children information, so let's give the corresponding marital status, when it makes sense&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Products&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;
+In the products table, there were originally 44 departments of products, and Duck noticed that some were redundant. He cleaned the departments and labels, and ended up with the following categories for the products, with the representation of each category in terms of number of products:
+&lt;p&gt;
+    
+&lt;img class=&quot;center&quot; src=&quot;http://localhost:4000/assets/images/products_newlabel.png&quot; alt=&quot;Markdown Monster icon&quot; width=&quot;800&quot; height=&quot;600&quot; /&gt;
+
+&lt;p&gt;
+Note that most of our products fall under processed foods and households.
+&lt;p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Transactions&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;
+Duck found out that there were 2,595,732 transactions over the year, knowing that one transaction is one household which proceeds to checkout.
+When he looked deeper into what products are sold in the transactions, he ended up with the following graph:
+&lt;p&gt;
+
+&lt;img class=&quot;center&quot; src=&quot;http://localhost:4000/assets/images/products_trans_department.png&quot; alt=&quot;Markdown Monster icon&quot; width=&quot;800&quot; height=&quot;600&quot; /&gt;
+    
+&lt;p&gt;
+Because he wanted to look at how much households spend on groceries, he decided to keep only transactions that are in the department of Groceries, Drug and General Merchandise, Produce Meat, Deli and Packaged meat.
+&lt;p&gt;
+
+&lt;p&gt;
+After that, he wanted to go deeper and look at the purchase behaviour of the customers. Firts, he looked at the distribution of the number of purchases per year.
+See below the graph he obtained:
+&lt;p&gt;
+
+&lt;img class=&quot;center&quot; src=&quot;http://localhost:4000/assets/images/distri_number_purchase.png&quot; alt=&quot;Markdown Monster icon&quot; width=&quot;800&quot; height=&quot;600&quot; /&gt;
+
+&lt;p&gt;
+At this point, he suspected that about half of the households don't use this retailer as their principal retailer, because they buy less that once a week. But he wanted to explore more on this idea, and thought that looking at the spendings could give a good indication.
+&lt;p&gt;
+    
+&lt;img class=&quot;center&quot; src=&quot;http://localhost:4000/assets/images/spending_vs_income.png&quot; alt=&quot;Markdown Monster icon&quot; width=&quot;800&quot; height=&quot;600&quot; /&gt;
+
+&lt;p&gt;
+Indeed, when he plotted the average yearly and weekly spending against the income, he figured out that there are quite a lot of households who spend less than $50 a week, which seems too low for a weekly budget of full groceries as the weekly amount set by &quot;Business insider&quot; for the US is around $70.
+In addition, according to the &quot;Bureau of Labor statistics&quot;, each household should have spent at least around $2500 dollars per year. Households that spent less than that did not participate in the study fully and bought groceries elsewhere. He thus hypothesized that to be a &quot;loyal&quot; shopper, they should spend at least $2500 per year. But, when he wanted to filter out to keep only the loyal shoppers, he ended up with only 286 households left, which is really too low for a relevant analysis. 
+His conclusion was : &quot;let's keep everybody for now&quot;.
+&lt;p&gt;
+    
+&lt;p&gt;
+To complete his understanding of the data, he looked at the distribution of the participation to the study:
+&lt;p&gt;
+    
+&lt;img class=&quot;center&quot; src=&quot;http://localhost:4000/assets/images/participation.png&quot; alt=&quot;Markdown Monster icon&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;
+
+&lt;p&gt;
+You can observe that most households only participated between 20 and 80 weeks. Only 3 households did over 100 weeks. But for the same reasons as before, he decided to keep them anyway, because with the filtering he would not have had muwh to analyze.
+&lt;p&gt;
+&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/font&gt;
+</description>
+        <pubDate>Thu, 12 Dec 2019 00:00:00 +0100</pubDate>
+        <link>http://localhost:4000/2019/12/12/additional_information/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/12/12/additional_information/</guid>
+        
+        
+      </item>
     
       <item>
         <title>Tell me what you buy, I will tell you who you are. A data story.</title>
