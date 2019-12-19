@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 18 Dec 2019 18:37:23 +0100</pubDate>
-    <lastBuildDate>Wed, 18 Dec 2019 18:37:23 +0100</lastBuildDate>
+    <pubDate>Thu, 19 Dec 2019 10:34:57 +0100</pubDate>
+    <lastBuildDate>Thu, 19 Dec 2019 10:34:57 +0100</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -117,16 +117,13 @@ Barely recovered from his banana and milk experience, Duck's second idea was to 
 
 &lt;img class=&quot;center&quot; src=&quot;http://localhost:4000/assets/images/BAD-corrplots.png&quot; alt=&quot;Markdown Monster icon&quot; width=&quot;800&quot; height=&quot;600&quot; /&gt;
 
-&lt;p&gt;Though visually he could not find any, he still wanted to be sure that none were hiding so he applied the elbow method for a cluster number from 2 to 20. o make sure that this visualization does not hide any clusters, we use elbow to find a good cluster’s number. However no good clustering arise from this analysis.&lt;/p&gt;
+&lt;p&gt;Though visually he could not find any, he still wanted to be sure that none were hiding so he applied the heuristic elbow method for a cluster number from 2 to 20. This method found an ideal number of 4 clusters. Full of hope, Duck applied K-means with 4 clusters and had a closer look at them.&lt;/p&gt;
+
+&lt;iframe id=&quot;igraph&quot; scrolling=&quot;no&quot; style=&quot;border:none;&quot; seamless=&quot;seamless&quot; src=&quot;https://plot.ly/~marvande/1.embed&quot; height=&quot;525&quot; width=&quot;60%&quot;&gt;&lt;/iframe&gt;
 
 
-&lt;img class=&quot;center&quot; src=&quot;http://localhost:4000/assets/images/BAD-elbow.png&quot; alt=&quot;Markdown Monster icon&quot; width=&quot;500&quot; height=&quot;300&quot; /&gt;
 
-&lt;p&gt;&lt;i&gt;Redefining labels:&lt;/i&gt;&lt;/p&gt;
-&lt;p&gt;
-In a third time, Duck reproduces the second strategy but taking a step back, and looking at the department instead of the labels. Elbow finds an ideal clustering for 4 clusters. Interestingly the K-mean clustering shows 4 groups mainly characterized by the quantities bought in the grocery department. 
-&lt;/p&gt;
-&lt;img class=&quot;center&quot; src=&quot;http://localhost:4000/assets/images/BAD-clusters.png&quot; alt=&quot;Markdown Monster icon&quot; width=&quot;450&quot; height=&quot;225&quot; /&gt;
+
 
 
 &lt;p&gt;&lt;i&gt;Best prediction further analysis&lt;/i&gt;&lt;/p&gt;

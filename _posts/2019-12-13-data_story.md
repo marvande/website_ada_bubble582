@@ -110,16 +110,13 @@ Barely recovered from his banana and milk experience, Duck's second idea was to 
 
 <img class="center" src="{{ "/assets/images/BAD-corrplots.png" | absolute_url }}" alt="Markdown Monster icon" width = "800" height = "600" />
 
-<p>Though visually he could not find any, he still wanted to be sure that none were hiding so he applied the elbow method for a cluster number from 2 to 20. o make sure that this visualization does not hide any clusters, we use elbow to find a good cluster’s number. However no good clustering arise from this analysis.</p>
+<p>Though visually he could not find any, he still wanted to be sure that none were hiding so he applied the heuristic elbow method for a cluster number from 2 to 20. This method found an ideal number of 4 clusters. Full of hope, Duck applied K-means with 4 clusters and had a closer look at them.</p>
+
+<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~marvande/1.embed" height="525" width="60%"></iframe>
 
 
-<img class="center" src="{{ "/assets/images/BAD-elbow.png" | absolute_url }}" alt="Markdown Monster icon" width = "500" height = "300" />
 
-<p><i>Redefining labels:</i></p>
-<p>
-In a third time, Duck reproduces the second strategy but taking a step back, and looking at the department instead of the labels. Elbow finds an ideal clustering for 4 clusters. Interestingly the K-mean clustering shows 4 groups mainly characterized by the quantities bought in the grocery department. 
-</p>
-<img class="center" src="{{ "/assets/images/BAD-clusters.png" | absolute_url }}" alt="Markdown Monster icon" width = "450" height = "225" />
+
 
 
 <p><i>Best prediction further analysis</i></p>
