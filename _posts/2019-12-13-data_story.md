@@ -96,9 +96,19 @@ Duck needed to change his plan of action as he had promised to deliver. Thus, he
 
 <p>His first idea was to toss aside labels and focus on specific products. So, he looked to cluster households by the exact weekly product quantities they bought, the hope being that different typical weekly shopping carts would appear (e.g. a weekly shopping cart with bananas and cheddar cheese). To identify the ideal number of clusters in the data, he used the elbow method and found a number between 5 and 9. This he used with k-means and created 7 households clusters. To identify what those clusters bought weekly, he decided that for a product to caracterize a cluster, it had to be bought by at least a third of the households in the clutster (a very generous threshold).  Looking at the results, Duck saw that two clusters contained only a single household and that one contained around a 1000 but had no product in common and dismissed those. Furthermore, the remaining clusters had either bananas or dairy as their caracteristic product. From this, Duck started to wonder if this dataset was a cruel joke that someone had played on him, or wether this shopping center was frequented by what seemed to be a troop of monkeys. Detective Duck concluded that though labels were too vague, clustering on products was probably too precise as there were several product IDs for the same type of product (e.g. 5 different milk IDs). So though some households maybe bought the same weekly quantity of milk, because they bought a different brand there carts were not assimilated as the same. 
 </p>
-    <img class="center" src="{{ "/assets/images/elbow7.png" | absolute_url }}" alt="Markdown Monster icon" width = "600" height = "400" />
 
-    <b>CONTINUE EDITING FROM HERE</b>
+<div class="row">
+  <div class="column">
+    <img class="center" src="{{ "/assets/images/elbow7.png" | absolute_url }}" alt="Markdown Monster icon" width = "200" height = "50" />
+  </div>
+  <div class="column">
+    <img class="center" src="{{ "/assets/images/elbow7.png" | absolute_url }}" alt="Markdown Monster icon" width = "200" height = "50" />
+  </div>
+</div>
+
+<p>
+<b>CONTINUE EDITING FROM HERE</b>
+</p>
 
 <p>
 
@@ -119,14 +129,22 @@ Barely recovered from his banana and milk experience, Duck's second idea was to 
 <p>
 In a third time, Duck reproduces the second strategy but taking a step back, and looking at the department instead of the labels. Elbow finds an ideal clustering for 4 clusters. Interestingly the K-mean clustering shows 4 groups mainly characterized by the quantities bought in the grocery department. 
 </p>
-<img class="center" src="{{ "/assets/images/BAD-clusters.png" | absolute_url }}" alt="Markdown Monster icon" width = "450" height = "225" />
+
+<div class="row">
+  <div class="column">
+    <img class="center" src="{{ "/assets/images/elbow4.png" | absolute_url }}" alt="Markdown Monster icon" width = "400" height = "275" />
+  </div>
+  <div class="column">
+    <img class="center" src="{{ "/assets/images/clusters.png" | absolute_url }}" alt="Markdown Monster icon" width = "375" height = "250" />
+  </div>
+</div>
 
 
 <p><i>Best prediction further analysis</i></p>
 <p>
 Duck finally selects the third strategy, which gave the best results, and goes deeper into details. He looks at how precise it is possible to be when predicting demographics. He picks the biggest cluster and plots its correlation matrix in between the product quantities per label, the demographic features, the spendings and the participation rate. The correlations are now way stronger than within the overall households. The highest scores (around 0.8) are for the dairy products and the processed foods correlated to the households size or number of kids. Interestingly, it reminds the detective about his finding using the first strategy. Moreover, the other correlations are mainly strong but not really strong. This implies that the retailer would need to compare the households over an important number of features to acceptably predict their demographics.  
 The G.A.C might be interested.
-<p>
+</p>
 
 <img class="center" src="{{ "/assets/images/BAD-correlation-matrix2.png" | absolute_url }}" alt="Markdown Monster icon" width = "600" height = "400" />
 
