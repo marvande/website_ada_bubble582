@@ -19,6 +19,11 @@ p{
 </style>
 <font size="2.5">
 
+iframe {
+  display:block;
+  width:100%;
+}
+
 <!--PREFACE: -->
 <h4>Chapter 0. Preface.</h4>
 <p>
@@ -122,15 +127,20 @@ Barely recovered from his banana and milk experience, Duck's second idea was to 
 
 <p>Though visually he could not find any, he still wanted to be sure that none were hiding so he applied the heuristic elbow method for a cluster number from 2 to 20. This method found an ideal number of 4 clusters. Full of hope, Duck applied K-means with 4 clusters and had a closer look at them.</p>
 
-<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~marvande/1.embed" height="525" width="60%"></iframe>
-
-
+<!--
+<div>
+  <iframe id="igraph" frameborder = '0' scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~marvande/1.embed" height="582" width="60%" frameBorder="0">></iframe>
+</div>
+-->
 
 
 <p><i>Redefining labels:</i></p>
 <p>
 In a third time, Duck reproduces the second strategy but taking a step back, and looking at the department instead of the labels. Elbow finds an ideal clustering for 4 clusters. Interestingly the K-mean clustering shows 4 groups mainly characterized by the quantities bought in the grocery department. 
 </p>
+
+
+
 
 <div class="row">
   <div class="column">

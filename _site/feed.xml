@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 19 Dec 2019 10:38:23 +0100</pubDate>
-    <lastBuildDate>Thu, 19 Dec 2019 10:38:23 +0100</lastBuildDate>
+    <pubDate>Thu, 19 Dec 2019 11:14:57 +0100</pubDate>
+    <lastBuildDate>Thu, 19 Dec 2019 11:14:57 +0100</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -25,6 +25,11 @@ p{
 &lt;/style&gt;
 
 &lt;font size=&quot;2.5&quot;&gt;
+
+iframe {
+  display:block;
+  width:100%;
+}
 
 &lt;!--PREFACE: --&gt;
 &lt;h4&gt;Chapter 0. Preface.&lt;/h4&gt;
@@ -129,15 +134,20 @@ Barely recovered from his banana and milk experience, Duck's second idea was to 
 
 &lt;p&gt;Though visually he could not find any, he still wanted to be sure that none were hiding so he applied the heuristic elbow method for a cluster number from 2 to 20. This method found an ideal number of 4 clusters. Full of hope, Duck applied K-means with 4 clusters and had a closer look at them.&lt;/p&gt;
 
-&lt;iframe id=&quot;igraph&quot; scrolling=&quot;no&quot; style=&quot;border:none;&quot; seamless=&quot;seamless&quot; src=&quot;https://plot.ly/~marvande/1.embed&quot; height=&quot;525&quot; width=&quot;60%&quot;&gt;&lt;/iframe&gt;
-
-
+&lt;!--
+&lt;div&gt;
+  &lt;iframe id=&quot;igraph&quot; frameborder = '0' scrolling=&quot;no&quot; style=&quot;border:none;&quot; seamless=&quot;seamless&quot; src=&quot;https://plot.ly/~marvande/1.embed&quot; height=&quot;582&quot; width=&quot;60%&quot; frameBorder=&quot;0&quot;&gt;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+--&gt;
 
 
 &lt;p&gt;&lt;i&gt;Redefining labels:&lt;/i&gt;&lt;/p&gt;
 &lt;p&gt;
 In a third time, Duck reproduces the second strategy but taking a step back, and looking at the department instead of the labels. Elbow finds an ideal clustering for 4 clusters. Interestingly the K-mean clustering shows 4 groups mainly characterized by the quantities bought in the grocery department. 
 &lt;/p&gt;
+
+
+
 
 &lt;div class=&quot;row&quot;&gt;
   &lt;div class=&quot;column&quot;&gt;
