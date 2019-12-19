@@ -98,6 +98,7 @@ Our favourite duck is not the kind of duck that gives up when discovering weak c
 Duck needed to change his plan of action as he had promised to deliver. Thus, he decided to search for typical grocery carts present in the data. From this, he hoped to be able to relate them to demographic parameters. To look for typical carts, he pursued several ideas.
 </p>
 
+
 <p><i>Product clusters:</i></p>
 
 <p>His first idea was to toss aside labels and focus on specific products. So, he looked to cluster households by the exact weekly product quantities they bought, the hope being that different typical weekly shopping carts would appear (e.g. a weekly shopping cart with bananas and cheddar cheese). To identify the ideal number of clusters in the data, he used the elbow method and found a number between 5 and 9. This he used with k-means and created 7 households clusters. To identify what those clusters bought weekly, he decided that for a product to caracterize a cluster, it had to be bought by at least a third of the households in the clutster (a very generous threshold).  Looking at the results, Duck saw that two clusters contained only a single household and that one contained around a 1000 but had no product in common and dismissed those. Furthermore, the remaining clusters had either bananas or dairy as their caracteristic product. From this, Duck started to wonder if this dataset was a cruel joke that someone had played on him, or wether this shopping center was frequented by what seemed to be a troop of monkeys. Detective Duck concluded that though labels were too vague, clustering on products was probably too precise as there were several product IDs for the same type of product (e.g. 5 different milk IDs). So though some households maybe bought the same weekly quantity of milk, because they bought a different brand there carts were not assimilated as the same. 
@@ -137,7 +138,7 @@ In a third time, Duck reproduces the second strategy but taking a step back, and
     <img class="center" src="{{ "/assets/images/elbow4.png" | absolute_url }}" alt="Markdown Monster icon" width = "400" height = "275" />
   </div>
   <div class="column">
-    <img class="center" src="{{ "/assets/images/clusters.png" | absolute_url }}" alt="Markdown Monster icon" width = "375" height = "250" />
+    <img class="center" src="{{ "/assets/images/barclusters.png" | absolute_url }}" alt="Markdown Monster icon" width = "375" height = "250" />
   </div>
 </div>
 
