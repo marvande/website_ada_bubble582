@@ -110,7 +110,7 @@ Duck used the k-means algorithm to finally create 7 households clusters. Duck se
 <p><i>Department clusters:</i></p>
 
 <p>
-Barely recovered from his banana and milk experience, Duck's second idea was to look for clusters in the labels and departments of the products. Reminder, departmetns include "Produce", "Grocery", "Drug and general merchandise", etc. After an SVD on the weekly average amount of products bought per deparments and on labels, the detective found that two dimensions explain 96% of total variance in the departments and 70% in the labels. So, he plotted the data along these two dimensions and colored it according to different demographic labels to search for clusters. See below, a 2D representation of the department and label data colored according to different demographics. 
+Barely recovered from his banana and milk experience, Duck's second idea was to look for clusters in the labels and departments of the products. Reminder, the department includes "Produce", "Grocery", "Drug and general merchandise", etc. After an SVD on the weekly average amount of products bought per deparment and on labels, the detective found that two dimensions explain 96% of total variance in the departments and 70% in the labels. So, he plotted the data along these two dimensions and colored it according to different demographic labels to search for clusters. See below, a 2D representation of the department and label data colored according to different demographics. 
 </p>
 
 <div class="row justify-content-md-center">
@@ -131,7 +131,7 @@ Barely recovered from his banana and milk experience, Duck's second idea was to 
   </div>
 </div>
 
-<p>Though visually he could not find any, he still wanted to be sure that none were hiding so he applied the heuristic elbow method for a cluster number from 2 to 20. This method found an ideal number of 4 clusters for departments but none for labels. Full of hope, Duck applied K-means with 4 clusters to the department data and had a closer look at them in the hope of discovering something.</p>
+<p>Though visually he could not find any cluster, he still wanted to be sure that none were still hidden. He decided to apply the heuristic elbow method for a cluster number from 2 to 20. This method found an ideal number of 4 clusters for departments but none for labels. Full of hope, Duck applied K-means with 4 clusters to the department data and had a closer look at them in the hope of discovering something.</p>
 
 <!--
 <div>
@@ -148,18 +148,18 @@ Barely recovered from his banana and milk experience, Duck's second idea was to 
   </div>
 </div>
 
-<p>Interestingly, Duck noticed that the clusters were influenced by the quantity of groceries bought. So, the only thing that seemed to distinguish households was how much groceries they bought weekly at this retailer. To see whether there were any other indicators in those clusters, Detective Duck decided to look at the biggest cluster and see whether there was any correlation within the cluster. Note: though there are around 1000 households in this cluster to calculate correlation between labels, there is only demographic information for 22 of them. So, all correlation calculations done between demographics and something else was with only 22 datapoints.
+<p>Interestingly, Duck noticed that the clusters were influenced by the quantity of groceries bought. So, the only thing that seemed to distinguish households was how much groceries they bought weekly at this retailer. To see whether there were any other indicators in those clusters, Detective Duck decided to look at the biggest cluster in order to see whether there was any correlation within the cluster. Note: though there are around 1000 households in this cluster, to calculate correlation between labels, there is only demographic information for 22 of them. All correlation calculations between demographics and anything else were done with only 22 datapoints.
 </p>
 
 <img class="center" src="{{ "/assets/images/notebook_images/cluster4_correlation.png" | absolute_url }}" alt="Markdown Monster icon" width = "600" height = "400" />
 
 <p>
-To Duck's delight, some bigger correlations appeared within the cluster. Notably, within this cluster there seemed to be some indication of a link between the weekly quantity of dairy bought and the number of kids/household size. This reminds the detective of the weird dairy and banana clusters that appeared when evaluating products. These clusters could be an indicator that, when separating households first according to how much they buy weekly at this retailer, one might get a better idea of their shopping patterns and relate them better to their demographics. Nevertheless, to conclude anything solid, Duck would have needed way more demographic data. 
+To Duck's delight, some bigger correlations appeared within the cluster. Notably, within this cluster there seemed to be some indication of a link between the weekly quantity of dairy bought and the number of kids/household size. This reminds the detective of the weird dairy and banana clusters that appeared when evaluating products. These clusters could be an indicator that, when separating households according to how much they bought weekly at this retailer, one might get a better idea of their shopping patterns. And this way relate them better to their demographics. Nevertheless, to conclude anything solid, Duck would have needed way more demographic data. 
 </p>
 
 
 <p>
-Though the correlation data had to be taken into account carefully because of the scarcity of demographic data, but not wanting to give up on his newly found clusters, Detective Duck decided to look at the proportion of label consumption for eahc cluster to see if there was anything separating them except the quantity of weekly groceries bought. Disappointingly, the proportions seemed rather similar, but Duck suspected that this was due to the fact that, as seen previously, labels are too global and most households buy the same thing. Instead of looking at average proportions, Duck suspected he should have looked at the proportions of outsiders in the clusters instead. But again, there was not enough data for that and our beloved detective was short on time. 
+Though the correlation data had to be taken into account carefully because of the scarcity of demographic data. Not wanting to give up on his newly found clusters, Detective Duck decided to look at the proportion of label consumption for each cluster. He was interested to see if there was anything separating them except the quantity of weekly groceries bought. Disappointingly, the proportions seemed more or less similar. Duck suspected that this was due to the fact that, as seen previously, labels are too global and most households buy the same things. Instead of looking at average proportions, Duck suspected he should have looked at the proportions of outsiders in the clusters instead. But again, there was not enough data for that and our beloved detective was short on time. 
 </p>
 
 <div class="row">
