@@ -48,7 +48,7 @@ Living in a time and age when every piece of our data is stored and analysed, th
 <img class="center" src="{{ "/assets/images/products_trans_newlabel.png" | absolute_url }}" alt="Markdown Monster icon" width = "900" height = "700" /> 
 </p>
 
-<p><em><strong>Getting to know the participants.</strong></em></p> 
+<p><em><strong>A good detective always gets to know his suspects.</strong></em></p> 
 
 <p>
    Before starting to hunt for clues, Detective Duck needed know better the households participating to the study. Things started getting tricky for the first time in his investigation. Indeed, after cleaning the 2500 households studied by Dunhumby, only 750 remained that provided their demographic information. At this moment, doubt started to arise in detective Duck's mind. The consumer advocacy group had provided him with a hard task. Undoubtetly, such a small dataset would cause troubles when trying to draw predictions. Duck regretted ever leaving his cozy pond. 
@@ -62,7 +62,7 @@ Still, Duck decided to extract the clients' main consumption patterns and to cor
 <br/>
 <hr/>
 <!--CHAPTER 2: -->
-<h4>Chapter 2. Profiling is not a piece of cake..</h4>
+<h4>Chapter 2. Profiling is not a piece of cake.</h4>
 
 <p>
    Once the data was ready for analysis, Detective Duck was excited to face the real challenge: customer profile hunting. 
@@ -70,13 +70,13 @@ Still, Duck decided to extract the clients' main consumption patterns and to cor
 
 <p><em><strong> A hunt for correlations.</strong></em></p> 
 <p>
-   Detective Duck seeked for major correlation patterns in the whole data. After some coding, he produced the following matrix to illustrate the strength of relation between demographic features, spendings and the products quantities for the most common labels. 
+   Detective Duck seeked for major correlation patterns in the whole data. After some coding, he produced the following matrix illustrating the strength of relation between demographic features, spendings and the products quantities for the most common labels. 
 </p>
 
 <img class="center" src="{{ "/assets/images/correlation-matrix1.png" | absolute_url }}" alt="Markdown Monster icon" width = "600" height = "400" />
 
 <p>
-From this, he learned that there is some high correlation between demographic information. Specifically, household size is highly correlated to the number of kids and marital status. This did not surprise Duck as any good detective could have deduced it. Nevertheless, he noted that most households with kids were married in this study. Furthermore, the mean and yearly spending were also correlated (0.7) with the different products quantities. This did not alarm Duck, as spending more usually means buying more products in a grocery store. Unfortunately, he could not find any direct link between demographics and product quantities. Unsatisfied with this result, he decided to further pursue the matter, as it seemed too easy. Duck supposed that no correlation between labels and demographics could mean that the labels were not specific enough. Indeed, all households probably buy globally the same amounts in the categories of vegetables, meat, dairy products, etc. Thus, except for outliers with extreme diets, all households seem to buy from the same grocery categories. </p>
+From this, he learned that there is some high correlation between demographic information. Specifically, household size is highly correlated to the number of kids and marital status. This did not surprise Duck, any good detective could have deduced it. Nevertheless, he noted that most households with kids were married in this study. Furthermore, the mean and yearly spending were also correlated (0.7) with the different products quantities. This did not alarm Duck, as spending more usually means buying more products in a grocery store. Unfortunately, he could not find any direct link between demographics and product quantities. Unsatisfied with this result, he decided to further pursue the matter. Duck supposed that no correlation between labels and demographics could mean that the labels were not specific enough. Indeed, all households probably buy globally the same amounts in the categories of vegetables, meat, dairy products, etc. Thus, except for outliers with extreme diets, all households seem to buy from the same grocery categories. </p>
 
 <iframe src='https://gfycat.com/ifr/AdmiredGlumBluebreastedkookaburra' frameborder='0' scrolling='no' width='60%' height='60%' style='position:absolute;top:0;left:0;' allowfullscreen>
 </iframe>
@@ -86,7 +86,7 @@ From this, he learned that there is some high correlation between demographic in
 <p><em><strong> A duck in a random forest.</strong></em></p> 
 
 <p>
-Our favourite duck is not the kind of duck that gives up when discovering weak correlations, the consumer group hired him because he is the best in the field. Thus, he decided to follow another path and to seek help from Machine Learning, more specifically, Random Forests. He built a predictive model that would hopefully find things, he as a simple duck, could not. First, he fitted a decision tree on the monthly product quantities bought by all households with available demographic information. The results for this were regretfully bad. So bad that Duck could have just randomly set a random demographic parameter for each household and the result would have been better (e.g. the ROC AUC score barely exceeded the baseline score). The same occurred when fitting a random forest model. Thus, he concluded that, using only labels, there was not enough data to train a good machine learning model and infer satisfying customer profiles. Disappointed but not surprised as he had already suspected something of the sort would happen (see section <i>Know thy households</i>), Duck resigned to pursue another investigation path, as he had not yet said his last word.
+Our favourite duck is not the kind of duck that gives up when discovering weak correlations. Thus, he decided to follow another path and to seek for help from Machine Learning, more specifically, Random Forests. He built a predictive model that would hopefully find things, he as a simple duck, could not. First, he fitted a decision tree on the monthly product quantities bought by all households with available demographic information. The results for this were regretfully bad. So bad that Duck could have just randomly set a random demographic parameter for each household and the result would have been better (e.g. the ROC AUC score barely exceeded the baseline score). The same occurred when fitting a random forest model. Thus, he concluded that, using only labels, there was not enough data to train a good machine learning model and infer satisfying customer profiles. Disappointed, he was however not surprised (see section <i>A good detective always gets to know his suspects.</i>), Duck resigned to pursue another investigation path, he had not yet said his last word.
 </p>
 
 <img class="center" src="{{ "/assets/images/pic10.jpg" | absolute_url }}" alt="Markdown Monster icon" width = "400" height = "200" />
