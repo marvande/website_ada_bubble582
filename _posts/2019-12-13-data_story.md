@@ -189,18 +189,18 @@ Though the correlation data had to be taken into account carefully because of th
 After this investigation full of twists and turns, Duck's report to the C.A.G was the following: </p>
 
 <p><i>
-“Due to the found results, there should be no cause for immediate worry. Though armed with extended data analysis ressources, I did not discover anything big from clients'shopping habits, at least not at the scale of this single retailer. To find anything signficant, retailers would need to build a clever data collection. So, to infer who their customers are, they would need to harvest a lot more demographic information of a way bigger and more diverse client sample. Indeed, globally households behave quite similarly, no matter their social class. The only danger right now it seems of targeted marketing, is that reailers can collect individual shopping habits and target you this way based on what you buy. Nevertheless, it seems that it is hard (at least it was for me) to predict who you are.” </i></p>
+“Due to the results, there should be no cause for immediate worry. Though armed with extended data analysis ressources, I did not discover anything big from clients'shopping habits, at least not at the scale of this single retailer. To find anything signficant, retailers would need to build a clever data collection. So, to infer who their customers are, they would need to harvest a lot more demographic information of a way bigger and more diverse client sample. Indeed, globally households behave quite similarly, no matter their social class. The main danger right now, is retailers collecting personal shopping habits and targetting indivdually their clients. Nevertheless, it seems that it is hard (at least it was for me) to predict who you are.” </i></p>
 
 <p><i>What Duck could have done better.</i></p>
 <p>
-The data collection the detective has analyzed might have been atypical. Since he did not have any information about the location nor the identiy of the shopping center, he could not claim that it represented an average American grocery store. 
+The data collection the detective has analyzed might have been atypical. Since he did not have any information about the location nor the identity of the shopping center, he could not claim that it represented an average American grocery store. 
 Moreover, the number of households who gave their demographic features was very limited. As accuracies of machine learning models highly rely on the dataset size, Duck stipulates that his results were probably biased by a too small dataset. 
-Furthermore, he chose the product’s labels rather arbitrarily. They were set based on the common classes of food he personally knew. This could have been done wiht higher precision, based on existing labeling available or using classification based on machine learning. 
+Furthermore, he chose the product’s labels arbitrarily. They were set based on the common classes of food he personally knew. This could have been done wiht higher precision, based on existing labeling available or using classification based on machine learning. 
 </p>
     
 <p><i>An open investigation.</i></p>
 <p>
-To be completely 100% re-assured, Duck advised the C.A.G to run a meta analysis among several shopping centers, in order to confirm or infirm his conclusions. The household set for each center should preferably be bigger and the products classification should be comparable in between the different grocery stores. 
+To be completely re-assured, Duck advised the C.A.G to run a meta analysis among several shopping centers, in order to confirm or infirm his conclusions. The household set giving their personal data for each center should preferably be bigger and the products classification should be comparable in between the different grocery stores. 
 <p>
 
 <p>Good job detective Duck. But our favorite detective does not even hear us. The smart little guy is already on his way to a new investigation.</p>
