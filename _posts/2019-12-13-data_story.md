@@ -40,7 +40,8 @@ Living in a time and age where every piece of our data is stored and analysed, t
 
 <p>
     The consumer advocacy group provided Detective Duck with a dataset owned by Dunhumby, an American Data Science company. This included the results of a two years long study, over 2500 voluntary households. When looking at the dataset, Duck quickly realised that this dataset was quite big and had a lot of miscellaneous information. Nevertheless, our favourite detective has learned that when faced with this challenge, one needs to start by pre-processing and cleaning the available information. For this, he kept only households which showed coherent and sufficient demographic data. Furthermore, he labelled all 10'000 products into precise grocery categories shown below. 
-        
+<img class="center" src="{{ "/assets/images/products_newlabel.png" | absolute_url }}" alt="Markdown Monster icon" width = "900" height = "700" /> 
+    
 <img class="center" src="{{ "/assets/images/products_trans_newlabel.png" | absolute_url }}" alt="Markdown Monster icon" width = "900" height = "700" /> 
 </p>
 
@@ -97,21 +98,10 @@ Duck needed to change his plan of action as he had promised to deliver. Thus, he
 <p>His first idea was to toss aside labels and focus on specific products. So, he looked to cluster households by the exact weekly product quantities they bought, the hope being that different typical weekly shopping carts would appear (e.g. a weekly shopping cart with bananas and cheddar cheese). To identify the ideal number of clusters in the data, he used the elbow method and found a number between 5 and 9. This he used with k-means and created 7 households clusters. To identify what those clusters bought weekly, he decided that for a product to caracterize a cluster, it had to be bought by at least a third of the households in the clutster (a very generous threshold).  Looking at the results, Duck saw that two clusters contained only a single household and that one contained around a 1000 but had no product in common and dismissed those. Furthermore, the remaining clusters had either bananas or dairy as their caracteristic product. From this, Duck started to wonder if this dataset was a cruel joke that someone had played on him, or wether this shopping center was frequented by what seemed to be a troop of monkeys. Detective Duck concluded that though labels were too vague, clustering on products was probably too precise as there were several product IDs for the same type of product (e.g. 5 different milk IDs). So though some households maybe bought the same weekly quantity of milk, because they bought a different brand there carts were not assimilated as the same. 
 </p>
 
-<div class="row">
-  <div class="column">
-    <img class="center" src="{{ "/assets/images/elbow7.png" | absolute_url }}" alt="Markdown Monster icon" width = "200" height = "50" />
-  </div>
-  <div class="column">
-    <img class="center" src="{{ "/assets/images/elbow7.png" | absolute_url }}" alt="Markdown Monster icon" width = "200" height = "50" />
-  </div>
-</div>
 
+<img class="center" src="{{ "/assets/images/elbow7.png" | absolute_url }}" alt="Markdown Monster icon" width = "500" height = "400" />
+  
 <p>
-<b>CONTINUE EDITING FROM HERE</b>
-</p>
-
-<p>
-
 <p><i>Department clusters:</i></p>
 
 <p>
