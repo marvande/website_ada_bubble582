@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Additionnal information about the analysis."
+title:  "Additionnal information about the data story."
 date:   2019-12-12
 excerpt: "A story about shopping patterns."
 image: "/assets/images/preprossessing.jpeg"
@@ -16,11 +16,12 @@ img {
 p{
     text-align: justify;
 }
+
 </style>
 <font size="2.5">
 
 <!--PREFACE: -->
-<h4>Chapter 0. Preface.</h4>
+<h4>Preface.</h4>
 <p>
 As in most cases, the people who collect the data are not the same as those who analyse them, and they are often not data analysis specialists. In Duck's investigation, it is not a different story. Thus, to be able to get useful information from the data, he first had to preprossess them, and search is a multitude of directions to get an idea of what he was manipulating.
 See below the additionnal analysis he could not present in the main blog.

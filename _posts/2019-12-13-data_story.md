@@ -8,6 +8,7 @@ image: "/assets/images/pic07.jpg"
 
 <!--Style used in the document: -->
 <style>
+
 img {
     display: block;
     margin-left: auto;
@@ -17,9 +18,9 @@ p{
     text-align: justify;
 }
 
-iframe {
-  display:block;
-  width:100%;
+div{
+  display: block;
+  visibility: visible;
 }
 
 </style>
@@ -33,7 +34,7 @@ Due to rumours about the troublesome ability of shopping centers to infer consum
 <img class="center" src="{{ "/assets/images/pic08.png" | absolute_url }}" alt="Markdown Monster icon" width = "200" height = "150" />
 
 <p>
-Living in a time and age when every piece of our data is stored and analysed, the consumer advocacy group wondered what information retailers can gather and infer about consumers. Nevertheless, to answer their question, the group could only provide Detective Duck with information about a two year shopping spree of  the clients of an unknown shopping center located somewhere in the US. Based on this data, Duck was tasked with identifying possible links, if they exist, between demographic information (e.g. marital status, income, number of children, etc) and purchase patterns. In other words, he needed to find out how easy it is for retailers to infer a specific customer profile based on their shopping habits. This was crucial to the consumer advocacy group. Indeed, a precise customer profiles can lead to pushing people even more to consume with using targeted marketing, and also to a loss of privacy. Luckily, Detective Duck followed the autumn 2019 Applied Data Analysis course at the EPFL and trained his newly skills with diligence to this case.
+Living in a time and age when every piece of our data is stored and analysed, the consumer advocacy group wondered what information retailers can gather and infer about consumers. Nevertheless, to answer their question, the group could only provide Detective Duck with information about a two year shopping spree of  the clients of an unknown shopping center located somewhere in the US. Based on this data, Duck was tasked with identifying possible links, if they exist, between demographic information (e.g. marital status, income, number of children, etc) and purchase patterns. In other words, he needed to find out how easy it is for retailers to infer a specific customer profile based on their shopping habits. This was crucial to the consumer advocacy group. Indeed, precise customer profiles can lead targeted marketing aimed at increasing consumers' spending habits, and also to a loss of privacy. Luckily, Detective Duck followed the autumn 2019 Applied Data Analysis course at the EPFL and trained his newly skills with diligence to this case.
 </p>
 
 <br/>
@@ -43,7 +44,7 @@ Living in a time and age when every piece of our data is stored and analysed, th
 <p><em><strong>A Dunnhumby dataset.</strong></em></p> 
 
 <p>
-    The consumer advocacy group provided Detective Duck with a dataset owned by Dunhumby, an American Data Science company. This included the results of a two years long study, over 2500 voluntary households. When looking at the dataset, Duck quickly realised that it was rather big and had a lot of miscellaneous information. Nevertheless, our favourite detective has learned that when faced with this kind of challenges, he has to start by pre-processing and cleaning the available information. For this, he kept only households which showed coherent and sufficient demographic data. Furthermore, he labelled all 10'000 products into precise grocery categories, as shown below. In this graph, Duck plotted the number of occurences per label for all the transactions. That is how he noticed that most transactions fell into five major labels : vegetables, meat & seafood, cookies & snacks & candy, dairy and beverages. This was not a major surprise to him. 
+    The consumer advocacy group provided Detective Duck with a dataset owned by Dunnhumby, an American Data Science company. This included the results of a two years long study, over 2500 voluntary households. When looking at the dataset, Duck quickly realised that it was rather big and had a lot of miscellaneous information. Nevertheless, our favourite detective had learned that when faced with this kind of challenges, he has to start by pre-processing and cleaning the available information. For this, he kept only households which showed coherent and sufficient demographic data. Furthermore, he labelled all 10'000 products into precise grocery categories, as shown below. In this graph, Duck plotted the number of occurences per label for all the transactions. That is how he noticed that most transactions fell into five major labels : vegetables, meat & seafood, cookies & snacks & candy, dairy and beverages. This was not a major surprise to him. 
     
 <img class="center" src="{{ "/assets/images/products_trans_newlabel.png" | absolute_url }}" alt="Markdown Monster icon" width = "900" height = "700" /> 
 </p>
@@ -51,7 +52,7 @@ Living in a time and age when every piece of our data is stored and analysed, th
 <p><em><strong>A good detective always gets to know his suspects.</strong></em></p> 
 
 <p>
-   Before starting to hunt for clues, Detective Duck needed know better the households participating to the study. Things started getting tricky for the first time in his investigation. Indeed, after cleaning the 2500 households studied by Dunhumby, only 750 remained that provided their demographic information. At this moment, doubt started to arise in detective Duck's mind. The consumer advocacy group had provided him with a hard task. Undoubtetly, such a small dataset would cause troubles when trying to draw predictions. Duck regretted ever leaving his cozy pond. 
+   Before starting to hunt for clues, Detective Duck needed know better the households participating to the study. Things started getting tricky for the first time in his investigation. Indeed, after cleaning the 2500 households studied by Dunnhumby, only 750 remained that provided their demographic information. At this moment, doubt started to arise in detective Duck's mind. The consumer advocacy group had provided him with a hard task. Undoubtetly, such a small dataset would cause troubles when trying to draw predictions. Duck regretted ever leaving his cozy pond. 
 
 </p>
 
@@ -78,8 +79,8 @@ Still, Duck decided to extract the clients' main consumption patterns and to cor
 <p>
 From this, he learned that there is some high correlation between demographic information. Specifically, household size is highly correlated to the number of kids and marital status. This did not surprise Duck, any good detective could have deduced it. Nevertheless, he noted that most households with kids were married in this study. Furthermore, the mean and yearly spending were also correlated (0.7) with the different products quantities. This did not alarm Duck, as spending more usually means buying more products in a grocery store. Unfortunately, he could not find any direct link between demographics and product quantities. Unsatisfied with this result, he decided to further pursue the matter. Duck supposed that no correlation between labels and demographics could mean that the labels were not specific enough. Indeed, all households probably buy globally the same amounts in the categories of vegetables, meat, dairy products, etc. Thus, except for outliers with extreme diets, all households seem to buy from the same grocery categories. </p>
 
-<iframe src='https://gfycat.com/ifr/AdmiredGlumBluebreastedkookaburra' frameborder='0' scrolling='no' width='60%' height='60%' style='position:absolute;top:0;left:0;' allowfullscreen>
-</iframe>
+<iframe src='https://gfycat.com/ifr/AdmiredGlumBluebreastedkookaburra' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'></iframe>
+
 
 <br/>
 <hr/>
@@ -133,9 +134,9 @@ Barely recovered from his banana and milk experience, Duck's second idea was to 
 
 <p>Though visually he could not find any cluster, he still wanted to be sure that none were still hidden. He decided to apply the heuristic elbow method for a cluster number from 2 to 20. This method found an ideal number of 4 clusters for departments but none for labels. Full of hope, Duck applied K-means with 4 clusters to the department data and had a closer look at them in the hope of discovering something.</p>
 
-<!--
-<div>
-  <iframe id="igraph" frameborder = '0' scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~marvande/1.embed" height="582" width="60%" frameBorder="0">></iframe>
+<!--<div>
+  <iframe id="igraph" seamless="seamless" src="https://plot.ly/~marvande/1.embed" frameborder="0" scrolling="no" onload="" allowtransparency="true"
+></iframe>
 </div>
 -->
 
