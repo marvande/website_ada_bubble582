@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 20 Dec 2019 08:04:19 +0100</pubDate>
-    <lastBuildDate>Fri, 20 Dec 2019 08:04:19 +0100</lastBuildDate>
+    <pubDate>Fri, 20 Dec 2019 08:12:27 +0100</pubDate>
+    <lastBuildDate>Fri, 20 Dec 2019 08:12:27 +0100</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -141,7 +141,8 @@ Barely recovered from his banana and milk experience, Duck's second idea was to 
 
 &lt;p&gt;Though visually he could not find any cluster, he still wanted to be sure that none were still hidden. He decided to apply the heuristic elbow method for a cluster number from 2 to 20. This method found an ideal number of 4 clusters for departments but none for labels. Full of hope, Duck applied K-means with 4 clusters to the department data and had a closer look at them in the hope of discovering something.&lt;/p&gt;
 
-&lt;!--&lt;div&gt;
+&lt;!--
+&lt;div&gt;
   &lt;iframe id=&quot;igraph&quot; seamless=&quot;seamless&quot; src=&quot;https://plot.ly/~marvande/1.embed&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; onload=&quot;&quot; allowtransparency=&quot;true&quot;
 &gt;&lt;/iframe&gt;
 &lt;/div&gt;
@@ -172,7 +173,7 @@ Though the correlation data had to be taken into account carefully because of th
 
 &lt;div class=&quot;row&quot;&gt;
   &lt;div class=&quot;column&quot;&gt;
-    &lt;img class=&quot;center&quot; src=&quot;http://localhost:4000/assets/images/notebook_images/clusterprop_1.png&quot; alt=&quot;Markdown Monster icon&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;
+    &lt;img class=&quot;center&quot; src=&quot;http://localhost:4000/assets/images/notebook_images/clusterprop_1.png&quot; alt=&quot;Markdown Monster icon&quot; width=&quot;375&quot; height=&quot;300&quot; /&gt;
   &lt;/div&gt;
   &lt;div class=&quot;column&quot;&gt;
     &lt;img class=&quot;center&quot; src=&quot;http://localhost:4000/assets/images/notebook_images/clusterprop_2.png&quot; alt=&quot;Markdown Monster icon&quot; width=&quot;375&quot; height=&quot;300&quot; /&gt;
@@ -180,7 +181,7 @@ Though the correlation data had to be taken into account carefully because of th
 &lt;/div&gt;
 &lt;div class=&quot;row&quot;&gt;
   &lt;div class=&quot;column&quot;&gt;
-    &lt;img class=&quot;center&quot; src=&quot;http://localhost:4000/assets/images/notebook_images/clusterprop_3.png&quot; alt=&quot;Markdown Monster icon&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;
+    &lt;img class=&quot;center&quot; src=&quot;http://localhost:4000/assets/images/notebook_images/clusterprop_3.png&quot; alt=&quot;Markdown Monster icon&quot; width=&quot;375&quot; height=&quot;300&quot; /&gt;
   &lt;/div&gt;
   &lt;div class=&quot;column&quot;&gt;
     &lt;img class=&quot;center&quot; src=&quot;http://localhost:4000/assets/images/notebook_images/clusterprop_4.png&quot; alt=&quot;Markdown Monster icon&quot; width=&quot;375&quot; height=&quot;300&quot; /&gt;

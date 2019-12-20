@@ -134,7 +134,8 @@ Barely recovered from his banana and milk experience, Duck's second idea was to 
 
 <p>Though visually he could not find any cluster, he still wanted to be sure that none were still hidden. He decided to apply the heuristic elbow method for a cluster number from 2 to 20. This method found an ideal number of 4 clusters for departments but none for labels. Full of hope, Duck applied K-means with 4 clusters to the department data and had a closer look at them in the hope of discovering something.</p>
 
-<!--<div>
+<!--
+<div>
   <iframe id="igraph" seamless="seamless" src="https://plot.ly/~marvande/1.embed" frameborder="0" scrolling="no" onload="" allowtransparency="true"
 ></iframe>
 </div>
@@ -165,7 +166,7 @@ Though the correlation data had to be taken into account carefully because of th
 
 <div class="row">
   <div class="column">
-    <img class="center" src="{{ "/assets/images/notebook_images/clusterprop_1.png" | absolute_url }}" alt="Markdown Monster icon" width = "400" height = "300" />
+    <img class="center" src="{{ "/assets/images/notebook_images/clusterprop_1.png" | absolute_url }}" alt="Markdown Monster icon" width = "375" height = "300" />
   </div>
   <div class="column">
     <img class="center" src="{{ "/assets/images/notebook_images/clusterprop_2.png" | absolute_url }}" alt="Markdown Monster icon" width = "375" height = "300" />
@@ -173,7 +174,7 @@ Though the correlation data had to be taken into account carefully because of th
 </div>
 <div class="row">
   <div class="column">
-    <img class="center" src="{{ "/assets/images/notebook_images/clusterprop_3.png" | absolute_url }}" alt="Markdown Monster icon" width = "400" height = "300" />
+    <img class="center" src="{{ "/assets/images/notebook_images/clusterprop_3.png" | absolute_url }}" alt="Markdown Monster icon" width = "375" height = "300" />
   </div>
   <div class="column">
     <img class="center" src="{{ "/assets/images/notebook_images/clusterprop_4.png" | absolute_url }}" alt="Markdown Monster icon" width = "375" height = "300" />
