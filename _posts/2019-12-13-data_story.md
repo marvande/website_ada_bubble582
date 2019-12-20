@@ -154,6 +154,31 @@ Though the correlation data had to be taken into account carefully because of th
   </div>
 </div>
 
+
+<br/>
+<p><em><strong> A last idea before closing the file.</strong></em></p> 
+<p>
+Just before handing in his report, Duck had a last idea that maybe it is not the composition of the basket which differentiated the customers, but their habits, such as the time at which they went shopping. He calculated the average transaction time per household and looked at how much it was correlated to the other features.
+</p>
+
+<p>
+<img class="center" src="{{ "/assets/images/correlation_average_time_with_other_features.png" | absolute_url }}" alt="Markdown Monster icon" width = "400" height = "300" />
+</p>
+<p>
+These calculations were not very concluent in terms of significant correlations. Duck could not conclude anything as coefficients were too low. The two highest correlation results, the age group and owner status, were investigated a bit further. </p>
+
+<img class="center" src="{{ "/assets/images/visualization_correlations.png" | absolute_url }}" alt="Markdown Monster icon" width = "300" height = "200" />
+
+<p>
+Though the correlation coefficients were really low, he still observed the following:
+<p>
+
+<ul>
+  <li> Older people tended to make their purchases sooner in the day than younger age groups. This seemed quite logical as older age groups tend to be retired and have more time in the day. </li>
+  <li> Probable renters and probable owners tended to make their purchases later than others.</li> 
+</ul>
+
+
 <!--CHAPTER 3: -->
 <br/>
 <hr/>
