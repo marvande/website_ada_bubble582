@@ -45,6 +45,7 @@ Living in a time and age when every piece of our data is stored and analysed, th
 
 <p>
     The consumer advocacy group provided Detective Duck with a dataset owned by Dunnhumby, an American Data Science company. This included the results of a two years long study, over 2500 voluntary households. When looking at the dataset, Duck quickly realised that it was rather big and had a lot of miscellaneous information. Nevertheless, our favourite detective had learned that when faced with this kind of challenges, he has to start by pre-processing and cleaning the available information. For this, he kept only households which showed coherent and sufficient demographic data. Furthermore, he labelled all 10'000 products into precise grocery categories, as shown below. In this graph, Duck plotted the number of occurences per label for all the transactions. That is how he noticed that most transactions fell into five major labels : vegetables, meat & seafood, cookies & snacks & candy, dairy and beverages. This was not a major surprise to him as this looked like a typical diet. 
+
 <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~marvande/17/#/" height="525" width="100%"></iframe>
 
 <p><em><strong>Know thy households.</strong></em></p> 

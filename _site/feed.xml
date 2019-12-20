@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 20 Dec 2019 10:42:25 +0100</pubDate>
-    <lastBuildDate>Fri, 20 Dec 2019 10:42:25 +0100</lastBuildDate>
+    <pubDate>Fri, 20 Dec 2019 11:02:53 +0100</pubDate>
+    <lastBuildDate>Fri, 20 Dec 2019 11:02:53 +0100</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -52,6 +52,7 @@ Living in a time and age when every piece of our data is stored and analysed, th
 
 &lt;p&gt;
     The consumer advocacy group provided Detective Duck with a dataset owned by Dunnhumby, an American Data Science company. This included the results of a two years long study, over 2500 voluntary households. When looking at the dataset, Duck quickly realised that it was rather big and had a lot of miscellaneous information. Nevertheless, our favourite detective had learned that when faced with this kind of challenges, he has to start by pre-processing and cleaning the available information. For this, he kept only households which showed coherent and sufficient demographic data. Furthermore, he labelled all 10'000 products into precise grocery categories, as shown below. In this graph, Duck plotted the number of occurences per label for all the transactions. That is how he noticed that most transactions fell into five major labels : vegetables, meat &amp;amp; seafood, cookies &amp;amp; snacks &amp;amp; candy, dairy and beverages. This was not a major surprise to him as this looked like a typical diet. 
+
 &lt;iframe id=&quot;igraph&quot; scrolling=&quot;no&quot; style=&quot;border:none;&quot; seamless=&quot;seamless&quot; src=&quot;https://plot.ly/~marvande/17/#/&quot; height=&quot;525&quot; width=&quot;100%&quot;&gt;&lt;/iframe&gt;
 
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;Know thy households.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt; 
@@ -216,79 +217,79 @@ p{
 &lt;!--PREFACE: --&gt;
 &lt;h4&gt;Preface.&lt;/h4&gt;
 &lt;p&gt;
-As in most cases, the people who collect the data are not the same as those who analyse them, and they are often not data analysis specialists. In Duck's investigation, it is not a different story. Thus, to be able to get useful information from the data, he first had to preprossess them, and search is a multitude of directions to get an idea of what he was manipulating.
-See below the additionnal analysis he could not present in the main blog.
+As in most cases, the people who collect the data are not the same as those who analyse them, and they are often not data analysis specialists. In Duck's investigation, it is not a different story. Thus, to be able to get useful information from the data, he first had to preprossess them, and search in a multitude of directions to get an idea of what he was manipulating.
+
+Please find below the additionnal analysis he could not present in his main report. 
 &lt;/p&gt;
 
 &lt;!--CHAPTER 1: --&gt;
 &lt;h4&gt;Chapter 1. Preprocessing of the data.&lt;/h4&gt;
 
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Households&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt; 
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Households.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt; 
 &lt;p&gt;
-As you saw in the main blog, Duck filtered out about one third of the households. Here, you will find the answer to your obvious question : &quot;WHY?&quot;.
+As you saw in the main report, Duck filtered out about one third of the households. Here, you will find the answer to your obvious question : &quot;WHY?&quot;.
 First of all, to analyse the relationship between the purchase habits and the demographic data, he had to drop the households from the transaction table for which the demographic data were not given.
-Second, he tried to get an idea of the distributions. See below the graphs of the demographic information about the customers.
+Secondly, he tried to get an idea of the distributions. See below the graphs of the demographic information about the customers.
 &lt;p&gt;
 
 &lt;img class=&quot;center&quot; src=&quot;http://localhost:4000/assets/images/demographics_distribution.png&quot; alt=&quot;Markdown Monster icon&quot; width=&quot;600&quot; height=&quot;450&quot; /&gt;
 
 &lt;p&gt;
-As he did, you can see that the demographic data is not distributed uniformly. Indeed:
+From this he swa that the demographic data was not distributed uniformly. Indeed:
 &lt;ul&gt;
-    &lt;li&gt;most of our households are between 35-54 years old.&lt;/li&gt;
-    &lt;li&gt;the majority of households have a size 1 or 2.&lt;/li&gt;
-    &lt;li&gt;most people earn between 35K and 75K (note that the average American income is 50K)&lt;/li&gt;
+    &lt;li&gt;most of our households were between 35-54 years old.&lt;/li&gt;
+    &lt;li&gt;the majority of households had a size 1 or 2.&lt;/li&gt;
+    &lt;li&gt;most people earned between 35K and 75K (note that the average American income is 50K)&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;
 After that, he noticed some inconsistencies. His conclusions were the following:
 &lt;ul&gt;
-    &lt;li&gt;the marital status is always coherent with the household size and the number of kids. In these cases where the household composition is wrong, let's just discard that information.&lt;/li&gt;
-    &lt;li&gt;there are some incongruities in the household size / number of kids when the marital status is Single, so let's discard these entries.&lt;/li&gt;
-    &lt;li&gt;if the marital status is Unknown, we fall back on the household size / number of children information, so let's give the corresponding marital status, when it makes sense&lt;/li&gt;
+    &lt;li&gt;the marital status was not always coherent with the household size and the number of kids. In the cases where the household composition was wrong, he discared the households. &lt;/li&gt;
+    &lt;li&gt;there were some incongruities in the household size / number of kids when the marital status was Single. He discarded those households. &lt;/li&gt;
+    &lt;li&gt;if the marital status was Unknown,he fell back on the household size / number of children information, so gave the corresponding marital status, when it made sense&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Products&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Products.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;
 In the products table, there were originally 44 departments of products, and Duck noticed that some were redundant. He cleaned the departments and labels, and ended up with the following categories for the products, with the representation of each category in terms of number of products:
 &lt;p&gt;
     
-&lt;img class=&quot;center&quot; src=&quot;http://localhost:4000/assets/images/products_newlabel.png&quot; alt=&quot;Markdown Monster icon&quot; width=&quot;800&quot; height=&quot;600&quot; /&gt;
+&lt;iframe id=&quot;igraph&quot; scrolling=&quot;no&quot; style=&quot;border:none;&quot; seamless=&quot;seamless&quot; src=&quot;https://plot.ly/~marvande/6.embed&quot; height=&quot;525&quot; width=&quot;100%&quot;&gt;&lt;/iframe&gt;
 
 &lt;p&gt;
-Note that most of our products fall under processed foods and households.
+Note that most of our products fell under cookies and snacks, meat and households.
 &lt;p&gt;
 
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;Transactions&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;
-Duck found out that there were 2,595,732 transactions over the year, knowing that one transaction is one household which proceeds to checkout.
-When he looked deeper into what products are sold in the transactions, he ended up with the following graph:
+Duck found out that there were 2,595,732 transactions over the year. When he looked deeper into what products were sold in the transactions, he ended up with the following graph:
 &lt;p&gt;
 
-&lt;img class=&quot;center&quot; src=&quot;http://localhost:4000/assets/images/products_trans_department.png&quot; alt=&quot;Markdown Monster icon&quot; width=&quot;800&quot; height=&quot;600&quot; /&gt;
+&lt;iframe id=&quot;igraph&quot; scrolling=&quot;no&quot; style=&quot;border:none;&quot; seamless=&quot;seamless&quot; src=&quot;https://plot.ly/~marvande/17/#/&quot; height=&quot;525&quot; width=&quot;100%&quot;&gt;&lt;/iframe&gt;
+
     
 &lt;p&gt;
-Because he wanted to look at how much households spend on groceries, he decided to keep only transactions that are in the department of Groceries, Drug and General Merchandise, Produce Meat, Deli and Packaged meat.
+Because he wanted to look at how much households spent on groceries, he decided to keep only transactions that were in the department of Groceries, Drug and General Merchandise, Produce Meat, Deli and Packaged Meat.
 &lt;p&gt;
 
 &lt;p&gt;
 After that, he wanted to go deeper and look at the purchase behaviour of the customers. Firts, he looked at the distribution of the number of purchases per year.
-See below the graph he obtained:
 &lt;p&gt;
 
 &lt;img class=&quot;center&quot; src=&quot;http://localhost:4000/assets/images/distri_number_purchase.png&quot; alt=&quot;Markdown Monster icon&quot; width=&quot;800&quot; height=&quot;600&quot; /&gt;
 
 &lt;p&gt;
-At this point, he suspected that about half of the households don't use this retailer as their principal retailer, because they buy less that once a week. But he wanted to explore more on this idea, and thought that looking at the spendings could give a good indication.
+At this point, he suspected that about half of the households did not use this retailer as their principal retailer, because they bought there less that once a week.To explore this further, he thought that looking at the spendings would give a good indication.
 &lt;p&gt;
     
 &lt;img class=&quot;center&quot; src=&quot;http://localhost:4000/assets/images/spending_vs_income.png&quot; alt=&quot;Markdown Monster icon&quot; width=&quot;800&quot; height=&quot;600&quot; /&gt;
 
 &lt;p&gt;
-Indeed, when he plotted the average yearly and weekly spending against the income, he figured out that there are quite a lot of households who spend less than $50 a week, which seems too low for a weekly budget of full groceries as the weekly amount set by &quot;Business insider&quot; for the US is around $70.
-In addition, according to the &quot;Bureau of Labor statistics&quot;, each household should have spent at least around $2500 dollars per year. Households that spent less than that did not participate in the study fully and bought groceries elsewhere. He thus hypothesized that to be a &quot;loyal&quot; shopper, they should spend at least $2500 per year. But, when he wanted to filter out to keep only the loyal shoppers, he ended up with only 286 households left, which is really too low for a relevant analysis. 
+Indeed, when he plotted the average yearly and weekly spending against the income, he figured out that there were quite a lot of households who spent less than $50 a week, which seemed too low for a weekly budget of full groceries as the weekly amount set by &quot;Business insider&quot; for the US is around $70.
+In addition, according to the &quot;Bureau of Labor statistics&quot;, each household should have spent at least around $2500 dollars per year. Households that spent less than that did not participate in the study fully and bought groceries elsewhere. He thus hypothesized that to be a &quot;loyal&quot; shopper, they should have spent at least $2500 per year. But, when he wanted to filter them out to keep only the loyal shoppers, he ended up with only 286 households left, which was really too low for a relevant analysis. 
 His conclusion was : &quot;let's keep everybody for now&quot;.
 &lt;p&gt;
     
@@ -299,7 +300,7 @@ To complete his understanding of the data, he looked at the distribution of the 
 &lt;img class=&quot;center&quot; src=&quot;http://localhost:4000/assets/images/participation.png&quot; alt=&quot;Markdown Monster icon&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;
 
 &lt;p&gt;
-You can observe that most households only participated between 20 and 80 weeks. Only 3 households did over 100 weeks. But for the same reasons as before, he decided to keep them anyway, because with the filtering he would not have had muwh to analyze.
+He observed that most households only participated between 20 and 80 weeks. Only 3 households did over 100 weeks. But for the same reasons as before, he decided to keep them anyway, because with the filtering he would not have had much to analyze. And that's the story of his pre-processing.
 &lt;p&gt;
 &lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/font&gt;
 </description>
